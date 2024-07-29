@@ -408,10 +408,11 @@ var vm = new Vue({
         }
         , input_compositionstart() {
             this.is_can_ans_check = false;
+            console.log('input_compositionstart');
         }
         , updateForgetWrodValue(index) {
             if(!this.is_can_ans_check) return console.log('is_can_ans_check');
-            if(this.inputAns[index] != this.test_words[index]['spell_en'] && this.inputAns[index] != this.test_words[index]['spell_jp']) return console.log([this.inputAns[index], this.test_words[index]['spell_en']]);
+            if(this.inputAns[index] != this.test_words[index]['spell_en'] && this.inputAns[index] != this.test_words[index]['spell_jp']) return;
             this.addRemember(this.test_words[index]['item']);
             this.postQuestion();
         }
@@ -420,7 +421,7 @@ var vm = new Vue({
             // let ans = this.inputAns.split("\n");
             // ans = ans.filter( item => item != '');
             if(!this.is_can_ans_check) return console.log('is_can_ans_check');
-            if(this.inputAns[index] != this.test_words[index]['spell_en'] && this.inputAns[index] != this.test_words[index]['spell_jp']) return console.log([this.inputAns[index], this.test_words[index]['spell_en']]);
+            if(this.inputAns[index] != this.test_words[index]['spell_en'] && this.inputAns[index] != this.test_words[index]['spell_jp']) return;
             this.addRemember(this.test_words[index]['item']);
             this.postQuestion();
         }
