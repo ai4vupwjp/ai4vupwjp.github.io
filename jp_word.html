@@ -362,6 +362,7 @@ var vm = new Vue({
             ,{ "id": 226, "word": "静か", "spell_jp": "しずか", "spell_en": "shizuka", "name": "安靜" }
             ,{ "id": 227, "word": "賑やか", "spell_jp": "にぎやか", "spell_en": "nigiyaka", "name": "熱鬧" }
         ]
+        , is_can_ans_check: true
         , test_words: []
         , all_test_words: []
 
@@ -408,10 +409,9 @@ var vm = new Vue({
         }
         , input_compositionstart() {
             this.is_can_ans_check = false;
-            console.log('input_compositionstart');
         }
         , updateForgetWrodValue(index) {
-            if(!this.is_can_ans_check) return console.log(this.is_can_ans_check);
+            if(!this.is_can_ans_check) return;
             if(this.inputAns[index] != this.test_words[index]['spell_en'] && this.inputAns[index] != this.test_words[index]['spell_jp']) return;
             this.addRemember(this.test_words[index]['item']);
             this.postQuestion();
@@ -420,7 +420,7 @@ var vm = new Vue({
             // 及時處裡
             // let ans = this.inputAns.split("\n");
             // ans = ans.filter( item => item != '');
-            if(!this.is_can_ans_check) return console.log(this.is_can_ans_check);
+            if(!this.is_can_ans_check) return;
             if(this.inputAns[index] != this.test_words[index]['spell_en'] && this.inputAns[index] != this.test_words[index]['spell_jp']) return;
             this.addRemember(this.test_words[index]['item']);
             this.postQuestion();
@@ -451,12 +451,14 @@ var vm = new Vue({
             let exists = this.forget_words.some(item => item.id === forget_word.id);
             if(!exists) this.forget_words.push(forget_word);
         }
-        , addRemember(remember_word){
+        , addRemember(remember_word, index){
+            this.removeForget(remember_word);
             let exists = this.remember_words.some(item => item.id === remember_word.id);
             if(!exists) this.remember_words.push(remember_word);
         }
         , removeForget(item, key){
-            this.forget_words.splice(key, 1)
+            if(!key) key = this.forget_words.findIndex(word_item => word_item.id === item.id);
+            if(key) this.forget_words.splice(key, 1);
             let new_item = { id: item.id, word: item.word, spell_jp: item.spell_jp, spell_en: item.spell_en, name: item.name };
             this.remember_words.push(new_item);
         }
