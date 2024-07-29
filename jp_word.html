@@ -410,8 +410,8 @@ var vm = new Vue({
             this.is_can_ans_check = false;
         }
         , updateForgetWrodValue(index) {
-            if(!this.is_can_ans_check) return;
-            if(this.inputAns[index] != this.test_words[index]['spell_en'] && this.inputAns[index] != this.test_words[index]['spell_jp']) return;
+            if(!this.is_can_ans_check) return console.log('is_can_ans_check');
+            if(this.inputAns[index] != this.test_words[index]['spell_en'] && this.inputAns[index] != this.test_words[index]['spell_jp']) return console.log([this.inputAns[index], this.test_words[index]['spell_en']]);
             this.addRemember(this.test_words[index]['item']);
             this.postQuestion();
         }
@@ -419,8 +419,8 @@ var vm = new Vue({
             // 及時處裡
             // let ans = this.inputAns.split("\n");
             // ans = ans.filter( item => item != '');
-            if(!this.is_can_ans_check) return;
-            if(this.inputAns[index] != this.test_words[index]['spell_en'] && this.inputAns[index] != this.test_words[index]['spell_jp']) return;
+            if(!this.is_can_ans_check) return console.log('is_can_ans_check');
+            if(this.inputAns[index] != this.test_words[index]['spell_en'] && this.inputAns[index] != this.test_words[index]['spell_jp']) return console.log([this.inputAns[index], this.test_words[index]['spell_en']]);
             this.addRemember(this.test_words[index]['item']);
             this.postQuestion();
         }
