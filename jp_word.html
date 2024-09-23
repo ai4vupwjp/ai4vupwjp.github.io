@@ -135,232 +135,753 @@ var vm = new Vue({
         , words: [
             { "id": 0, "word": "私", "spell_jp": "わたし", "spell_en": "watashi", "name": "我" }
             , { "id": 1, "word": "彼/彼女", "spell_jp": "かれ/かのじょ", "spell_en": "kare/kanojo", "name": "他/她" }
-            ,{ "id": 2, "word": "家族", "spell_jp": "かぞく", "spell_en": "kazoku", "name": "家庭" }
-            ,{ "id": 3, "word": "両親", "spell_jp": "りょうしん", "spell_en": "ryoushin", "name": "父母" }
-            ,{ "id": 4, "word": "祖父", "spell_jp": "そふ", "spell_en": "sofu", "name": "祖父" }
-            ,{ "id": 5, "word": "祖母", "spell_jp": "そぼ", "spell_en": "sobo", "name": "祖母" }
-            ,{ "id": 6, "word": "父", "spell_jp": "ちち", "spell_en": "chichi", "name": "父親" }
-            ,{ "id": 7, "word": "母", "spell_jp": "はは", "spell_en": "haha", "name": "母親" }
-            ,{ "id": 8, "word": "兄弟", "spell_jp": "きょうだい", "spell_en": "kyoudai", "name": "兄弟姐妹" }
-            ,{ "id": 9, "word": "兄", "spell_jp": "あに", "spell_en": "ani", "name": "兄" }
-            ,{ "id": 10, "word": "姉", "spell_jp": "あね", "spell_en": "ane", "name": "姐" }
-            ,{ "id": 11, "word": "弟", "spell_jp": "おとうと", "spell_en": "otouto", "name": "弟" }
-            ,{ "id": 12, "word": "妹", "spell_jp": "いもうと", "spell_en": "imouto", "name": "妹" }
-            ,{ "id": 13, "word": "先生", "spell_jp": "せんせい", "spell_en": "sensei", "name": "老師" }
-            ,{ "id": 14, "word": "学生", "spell_jp": "がくせい", "spell_en": "gakusei", "name": "學生" }
-            ,{ "id": 15, "word": "友達", "spell_jp": "ともだち", "spell_en": "tomodachi", "name": "朋友" }
-            ,{ "id": 16, "word": "親友", "spell_jp": "しんゆう", "spell_en": "shin'yuu", "name": "摯友" }
-            ,{ "id": 17, "word": "警察", "spell_jp": "けいさつ", "spell_en": "keisatsu", "name": "警察" }
-            ,{ "id": 18, "word": "会社員", "spell_jp": "かいしゃいん", "spell_en": "kaishain", "name": "公司員工" }
-            ,{ "id": 19, "word": "店", "spell_jp": "みせ", "spell_en": "mise", "name": "商店" }
-            ,{ "id": 20, "word": "駅", "spell_jp": "えき", "spell_en": "eki", "name": "車站" }
-            ,{ "id": 21, "word": "道", "spell_jp": "みち", "spell_en": "michi", "name": "道路" }
-            ,{ "id": 22, "word": "家", "spell_jp": "いえ", "spell_en": "ie", "name": "家" }
-            ,{ "id": 23, "word": "部屋", "spell_jp": "へや", "spell_en": "heya", "name": "房間" }
-            ,{ "id": 24, "word": "建物", "spell_jp": "たてもの", "spell_en": "tatemono", "name": "建築物" }
-            ,{ "id": 25, "word": "レストラン", "spell_jp": "れすとらん", "spell_en": "resutoran", "name": "餐廳" }
-            ,{ "id": 26, "word": "会社", "spell_jp": "かいしゃ", "spell_en": "kaisha", "name": "公司" }
-            ,{ "id": 27, "word": "銀行", "spell_jp": "ぎんこう", "spell_en": "ginkou", "name": "銀行" }
-            ,{ "id": 28, "word": "公園", "spell_jp": "こうえん", "spell_en": "kouen", "name": "公園" }
-            ,{ "id": 29, "word": "病院", "spell_jp": "びょういん", "spell_en": "byouin", "name": "醫院" }
-            ,{ "id": 30, "word": "学校", "spell_jp": "がっこう", "spell_en": "gakkou", "name": "學校" }
-            ,{ "id": 31, "word": "教室", "spell_jp": "きょうしつ", "spell_en": "kyoushitsu", "name": "教室" }
-            ,{ "id": 32, "word": "地下鉄", "spell_jp": "ちかてつ", "spell_en": "chikatetsu", "name": "地鐵" }
-            ,{ "id": 33, "word": "バス停", "spell_jp": "ばすてい", "spell_en": "basutei", "name": "公車站" }
-            ,{ "id": 34, "word": "喫茶店", "spell_jp": "きっさてん", "spell_en": "kissaten", "name": "咖啡店" }
-            ,{ "id": 35, "word": "郵便局", "spell_jp": "ゆうびんきょく", "spell_en": "yuubinkyoku", "name": "郵局" }
-            ,{ "id": 36, "word": "図書館", "spell_jp": "としょかん", "spell_en": "toshokan", "name": "圖書館" }
-            ,{ "id": 37, "word": "映画館", "spell_jp": "えいがかん", "spell_en": "eigakan", "name": "電影院" }
-            ,{ "id": 38, "word": "交差点", "spell_jp": "こうさてん", "spell_en": "kousaten", "name": "交叉口" }
-            ,{ "id": 39, "word": "入り口", "spell_jp": "いりぐち", "spell_en": "iriguchi", "name": "入口" }
-            ,{ "id": 40, "word": "出口", "spell_jp": "でぐち", "spell_en": "deguchi", "name": "出口" }
-            ,{ "id": 41, "word": "アパート", "spell_jp": "あぱーと", "spell_en": "apaato", "name": "公寓" }
-            ,{ "id": 42, "word": "デパート", "spell_jp": "でばーと", "spell_en": "depaato", "name": "百貨公司" }
-            ,{ "id": 43, "word": "エレベーター", "spell_jp": "えれべーたー", "spell_en": "erebeetaa", "name": "電梯" }
-            ,{ "id": 44, "word": "ホテル", "spell_jp": "ほてる", "spell_en": "hoteru", "name": "飯店" }
-            ,{ "id": 45, "word": "トイレ", "spell_jp": "といれ", "spell_en": "toire", "name": "廁所" }
-            ,{ "id": 46, "word": "場所", "spell_jp": "ばしょ", "spell_en": "basho", "name": "地點" }
-            ,{ "id": 47, "word": "所", "spell_jp": "ところ", "spell_en": "tokoro", "name": "地方" }
-            ,{ "id": 48, "word": "食べ物", "spell_jp": "たべもの", "spell_en": "tabemono", "name": "食物" }
-            ,{ "id": 49, "word": "ご飯", "spell_jp": "ごはん", "spell_en": "gohan", "name": "米飯" }
-            ,{ "id": 50, "word": "果物", "spell_jp": "くだもの", "spell_en": "kudamono", "name": "水果" }
-            ,{ "id": 51, "word": "お菓子", "spell_jp": "おかし", "spell_en": "okashi", "name": "糖果" }
-            ,{ "id": 52, "word": "カレー", "spell_jp": "かれー", "spell_en": "karee", "name": "咖喱" }
-            ,{ "id": 53, "word": "パン", "spell_jp": "ぱん", "spell_en": "pan", "name": "麵包" }
-            ,{ "id": 54, "word": "料理", "spell_jp": "りょうり", "spell_en": "ryouri", "name": "料理" }
-            ,{ "id": 55, "word": "魚", "spell_jp": "さかな", "spell_en": "sakana", "name": "魚" }
-            ,{ "id": 56, "word": "肉", "spell_jp": "にく", "spell_en": "niku", "name": "肉" }
-            ,{ "id": 57, "word": "牛肉", "spell_jp": "ぎゅうにく", "spell_en": "gyuuniku", "name": "牛肉" }
-            ,{ "id": 58, "word": "豚肉", "spell_jp": "ぶたにく", "spell_en": "butaniku", "name": "豬肉" }
-            ,{ "id": 59, "word": "鶏肉", "spell_jp": "とりにく", "spell_en": "toriniku", "name": "雞肉" }
-            ,{ "id": 60, "word": "野菜", "spell_jp": "やさい", "spell_en": "yasai", "name": "蔬菜" }
-            ,{ "id": 61, "word": "玉子、卵、たまご", "spell_jp": "たまご", "spell_en": "tamago", "name": "蛋" }
-            ,{ "id": 62, "word": "醤油", "spell_jp": "しょうゆ", "spell_en": "shouyu", "name": "醬油" }
-            ,{ "id": 63, "word": "飲み物", "spell_jp": "のみもの", "spell_en": "nomimono", "name": "飲料" }
-            ,{ "id": 64, "word": "水", "spell_jp": "みず", "spell_en": "mizu", "name": "水" }
-            ,{ "id": 65, "word": "お茶", "spell_jp": "おちゃ", "spell_en": "ocha", "name": "茶" }
-            ,{ "id": 66, "word": "紅茶", "spell_jp": "こうちゃ", "spell_en": "koucha", "name": "紅茶" }
-            ,{ "id": 67, "word": "牛乳", "spell_jp": "ぎゅうにゅう", "spell_en": "gyuunyuu", "name": "牛奶" }
-            ,{ "id": 68, "word": "お酒", "spell_jp": "おさけ", "spell_en": "osake", "name": "酒" }
-            ,{ "id": 69, "word": "ビール", "spell_jp": "びーる", "spell_en": "biiru", "name": "啤酒" }
-            ,{ "id": 70, "word": "コーヒー", "spell_jp": "こーひー", "spell_en": "koohii", "name": "咖啡" }
-            ,{ "id": 71, "word": "ジュース", "spell_jp": "じゅーす", "spell_en": "juusu", "name": "果汁" }
-            ,{ "id": 72, "word": "服", "spell_jp": "ふく", "spell_en": "fuku", "name": "衣服" }
-            ,{ "id": 73, "word": "洋服", "spell_jp": "ようふく", "spell_en": "youfuku", "name": "西裝" }
-            ,{ "id": 74, "word": "コート", "spell_jp": "こーと", "spell_en": "kooto", "name": "外套" }
-            ,{ "id": 75, "word": "シャツ", "spell_jp": "しゃつ", "spell_en": "shatsu", "name": "襯衫" }
-            ,{ "id": 76, "word": "Tシャツ", "spell_jp": "Tしゃつ", "spell_en": "T-shatsu", "name": "T恤" }
-            ,{ "id": 77, "word": "セーター", "spell_jp": "せーたー", "spell_en": "seetaa", "name": "毛衣" }
-            ,{ "id": 78, "word": "ポケット", "spell_jp": "ぽけっと", "spell_en": "poketto", "name": "口袋" }
-            ,{ "id": 79, "word": "ボタン", "spell_jp": "ぼたん", "spell_en": "botan", "name": "鈕扣" }
-            ,{ "id": 80, "word": "ズボン", "spell_jp": "ずぼん", "spell_en": "zubon", "name": "褲子" }
-            ,{ "id": 81, "word": "半ズボン", "spell_jp": "はんズボン", "spell_en": "hanzubon", "name": "短褲" }
-            ,{ "id": 82, "word": "スカート", "spell_jp": "すかーと", "spell_en": "sukaato", "name": "裙子" }
-            ,{ "id": 83, "word": "靴", "spell_jp": "くつ", "spell_en": "kutsu", "name": "鞋子" }
-            ,{ "id": 84, "word": "靴下", "spell_jp": "くつした", "spell_en": "kutsushita", "name": "襪子" }
-            ,{ "id": 85, "word": "本", "spell_jp": "ほん", "spell_en": "hon", "name": "書籍" }
-            ,{ "id": 86, "word": "紙", "spell_jp": "かみ", "spell_en": "kami", "name": "紙" }
-            ,{ "id": 87, "word": "地図", "spell_jp": "ちず", "spell_en": "chizu", "name": "地圖" }
-            ,{ "id": 88, "word": "辞書", "spell_jp": "じしょ", "spell_en": "jisho", "name": "辭典" }
-            ,{ "id": 89, "word": "手紙", "spell_jp": "てがみ", "spell_en": "tegami", "name": "信件" }
-            ,{ "id": 90, "word": "切手", "spell_jp": "きって", "spell_en": "kitte", "name": "郵票" }
-            ,{ "id": 91, "word": "本棚", "spell_jp": "ほんだな", "spell_en": "hondana", "name": "書架" }
-            ,{ "id": 92, "word": "鉛筆", "spell_jp": "えんぴつ", "spell_en": "enpitsu", "name": "鉛筆" }
-            ,{ "id": 93, "word": "定規", "spell_jp": "じょうぎ", "spell_en": "jougi", "name": "尺規" }
-            ,{ "id": 94, "word": "万年筆", "spell_jp": "まんねんひつ", "spell_en": "mannenhitsu", "name": "鋼筆" }
-            ,{ "id": 95, "word": "消しゴム", "spell_jp": "けしゴム", "spell_en": "keshigomu", "name": "橡皮擦" }
-            ,{ "id": 96, "word": "ペン", "spell_jp": "ぺん", "spell_en": "pen", "name": "筆" }
-            ,{ "id": 97, "word": "ノート", "spell_jp": "のーと", "spell_en": "nooto", "name": "筆記本" }
-            ,{ "id": 98, "word": "ボールペン", "spell_jp": "ぼーるぺん", "spell_en": "boorupen", "name": "原子筆" }
-            ,{ "id": 99, "word": "シャープペンシル", "spell_jp": "しゃーぷぺんしる", "spell_en": "shaapupenshiru", "name": "自動鉛筆" }
-            ,{ "id": 100, "word": "電話", "spell_jp": "でんわ", "spell_en": "denwa", "name": "電話" }
-            ,{ "id": 101, "word": "冷蔵庫", "spell_jp": "れいぞうこ", "spell_en": "reizouko", "name": "冰箱" }
-            ,{ "id": 102, "word": "洗濯機", "spell_jp": "せんたくき", "spell_en": "sentakuki", "name": "洗衣機" }
-            ,{ "id": 103, "word": "テレビ", "spell_jp": "てれび", "spell_en": "terebi", "name": "電視" }
-            ,{ "id": 104, "word": "ビデオ", "spell_jp": "びでお", "spell_en": "bideo", "name": "錄影機" }
-            ,{ "id": 105, "word": "カメラ", "spell_jp": "かめら", "spell_en": "kamera", "name": "相機" }
-            ,{ "id": 106, "word": "パソコン", "spell_jp": "ぱそこん", "spell_en": "pasokon", "name": "電腦" }
-            ,{ "id": 107, "word": "エアコン", "spell_jp": "えあこん", "spell_en": "eakon", "name": "空調" }
-            ,{ "id": 108, "word": "上", "spell_jp": "うえ", "spell_en": "ue", "name": "上" }
-            ,{ "id": 109, "word": "下", "spell_jp": "した", "spell_en": "shita", "name": "下" }
-            ,{ "id": 110, "word": "左", "spell_jp": "ひだり", "spell_en": "hidari", "name": "左" }
-            ,{ "id": 111, "word": "右", "spell_jp": "みぎ", "spell_en": "migi", "name": "右" }
-            ,{ "id": 112, "word": "中", "spell_jp": "なか", "spell_en": "naka", "name": "中" }
-            ,{ "id": 113, "word": "前", "spell_jp": "まえ", "spell_en": "mae", "name": "前" }
-            ,{ "id": 114, "word": "後ろ", "spell_jp": "うしろ", "spell_en": "ushiro", "name": "後" }
-            ,{ "id": 115, "word": "東", "spell_jp": "ひがし", "spell_en": "higashi", "name": "東" }
-            ,{ "id": 116, "word": "西", "spell_jp": "にし", "spell_en": "nishi", "name": "西" }
-            ,{ "id": 117, "word": "南", "spell_jp": "みなみ", "spell_en": "minami", "name": "南" }
-            ,{ "id": 118, "word": "北", "spell_jp": "きた", "spell_en": "kita", "name": "北" }
-            ,{ "id": 119, "word": "内", "spell_jp": "うち", "spell_en": "uchi", "name": "內部" }
-            ,{ "id": 120, "word": "外", "spell_jp": "そと", "spell_en": "soto", "name": "外部" }
-            ,{ "id": 121, "word": "辺", "spell_jp": "へん", "spell_en": "hen", "name": "周邊" }
-            ,{ "id": 122, "word": "隣", "spell_jp": "となり", "spell_en": "tonari", "name": "旁邊" }
-            ,{ "id": 123, "word": "横", "spell_jp": "よこ", "spell_en": "yoko", "name": "橫" }
-            ,{ "id": 124, "word": "1", "spell_jp": "いち", "spell_en": "ichi", "name": "一" }
-            ,{ "id": 125, "word": "2", "spell_jp": "に", "spell_en": "ni", "name": "二" }
-            ,{ "id": 126, "word": "3", "spell_jp": "さん", "spell_en": "san", "name": "三" }
-            ,{ "id": 127, "word": "4", "spell_jp": "よん", "spell_en": "yon", "name": "四" }
-            ,{ "id": 128, "word": "5", "spell_jp": "ご", "spell_en": "go", "name": "五" }
-            ,{ "id": 129, "word": "6", "spell_jp": "ろく", "spell_en": "roku", "name": "六" }
-            ,{ "id": 130, "word": "7", "spell_jp": "しち/なな", "spell_en": "shichi/nana", "name": "七" }
-            ,{ "id": 131, "word": "8", "spell_jp": "はち", "spell_en": "hachi", "name": "八" }
-            ,{ "id": 132, "word": "9", "spell_jp": "きゅう", "spell_en": "kyuu", "name": "九" }
-            ,{ "id": 133, "word": "10", "spell_jp": "じゅう", "spell_en": "juu", "name": "十" }
-            ,{ "id": 134, "word": "会う", "spell_jp": "あう", "spell_en": "au", "name": "見面" }
-            ,{ "id": 135, "word": "遊ぶ", "spell_jp": "あそぶ", "spell_en": "asobu", "name": "玩" }
-            ,{ "id": 136, "word": "歩く", "spell_jp": "あるく", "spell_en": "aruku", "name": "走" }
-            ,{ "id": 137, "word": "言う", "spell_jp": "いう", "spell_en": "iu", "name": "說" }
-            ,{ "id": 138, "word": "行く", "spell_jp": "いく", "spell_en": "iku", "name": "去" }
-            ,{ "id": 139, "word": "要る", "spell_jp": "いる", "spell_en": "iru", "name": "需要" }
-            ,{ "id": 140, "word": "歌う", "spell_jp": "うたう", "spell_en": "utau", "name": "唱歌" }
-            ,{ "id": 141, "word": "泳ぐ", "spell_jp": "およぐ", "spell_en": "oyogu", "name": "游泳" }
-            ,{ "id": 142, "word": "終わる", "spell_jp": "おわる", "spell_en": "owaru", "name": "結束" }
-            ,{ "id": 143, "word": "教える", "spell_jp": "おしえる", "spell_en": "oshieru", "name": "教導" }
-            ,{ "id": 144, "word": "買う", "spell_jp": "かう", "spell_en": "kau", "name": "買" }
-            ,{ "id": 145, "word": "書く", "spell_jp": "かく", "spell_en": "kaku", "name": "寫" }
-            ,{ "id": 146, "word": "掛かる", "spell_jp": "かかる", "spell_en": "kakaru", "name": "掛上" }
-            ,{ "id": 147, "word": "帰る", "spell_jp": "かえる", "spell_en": "kaeru", "name": "歸" }
-            ,{ "id": 148, "word": "聞く", "spell_jp": "きく", "spell_en": "kiku", "name": "聽" }
-            ,{ "id": 149, "word": "答える", "spell_jp": "こたえる", "spell_en": "kotaeru", "name": "回答" }
-            ,{ "id": 150, "word": "困る", "spell_jp": "こまる", "spell_en": "komaru", "name": "困擾" }
-            ,{ "id": 151, "word": "来る", "spell_jp": "くる", "spell_en": "kuru", "name": "來" }
-            ,{ "id": 152, "word": "死ぬ", "spell_jp": "しぬ", "spell_en": "shinu", "name": "死" }
-            ,{ "id": 153, "word": "住む", "spell_jp": "すむ", "spell_en": "sumu", "name": "住" }
-            ,{ "id": 154, "word": "座る", "spell_jp": "すわる", "spell_en": "suwaru", "name": "坐" }
-            ,{ "id": 155, "word": "立つ", "spell_jp": "たつ", "spell_en": "tatsu", "name": "立" }
-            ,{ "id": 156, "word": "食べる", "spell_jp": "たべる", "spell_en": "taberu", "name": "吃" }
-            ,{ "id": 157, "word": "疲れる", "spell_jp": "つかれる", "spell_en": "tsukareru", "name": "累" }
-            ,{ "id": 158, "word": "着く", "spell_jp": "つく", "spell_en": "tsuku", "name": "到達" }
-            ,{ "id": 159, "word": "使う", "spell_jp": "つかう", "spell_en": "tsukau", "name": "使用" }
-            ,{ "id": 160, "word": "作る", "spell_jp": "つくる", "spell_en": "tsukuru", "name": "製作" }
-            ,{ "id": 161, "word": "止まる", "spell_jp": "とまる", "spell_en": "tomaru", "name": "停" }
-            ,{ "id": 162, "word": "飛ぶ", "spell_jp": "とぶ", "spell_en": "tobu", "name": "飛" }
-            ,{ "id": 163, "word": "泣く", "spell_jp": "なく", "spell_en": "naku", "name": "哭" }
-            ,{ "id": 164, "word": "寝る", "spell_jp": "ねる", "spell_en": "neru", "name": "睡" }
-            ,{ "id": 165, "word": "乗る", "spell_jp": "のる", "spell_en": "noru", "name": "乘" }
-            ,{ "id": 166, "word": "飲む", "spell_jp": "のむ", "spell_en": "nomu", "name": "喝" }
-            ,{ "id": 167, "word": "違う", "spell_jp": "ちがう", "spell_en": "chigau", "name": "錯誤" }
-            ,{ "id": 168, "word": "並ぶ", "spell_jp": "ならぶ", "spell_en": "narabu", "name": "排列" }
-            ,{ "id": 169, "word": "入る", "spell_jp": "はいる", "spell_en": "hairu", "name": "進入" }
-            ,{ "id": 170, "word": "始まる", "spell_jp": "はじまる", "spell_en": "hajimaru", "name": "開始" }
-            ,{ "id": 171, "word": "走る", "spell_jp": "はしる", "spell_en": "hashiru", "name": "奔跑" }
-            ,{ "id": 172, "word": "降る", "spell_jp": "ふる", "spell_en": "furu", "name": "下" }
-            ,{ "id": 173, "word": "見る", "spell_jp": "みる", "spell_en": "miru", "name": "看" }
-            ,{ "id": 174, "word": "待つ", "spell_jp": "まつ", "spell_en": "matsu", "name": "等" }
-            ,{ "id": 175, "word": "読む", "spell_jp": "よむ", "spell_en": "yomu", "name": "讀" }
-            ,{ "id": 176, "word": "暑い", "spell_jp": "あつい", "spell_en": "atsui", "name": "熱" }
-            ,{ "id": 177, "word": "寒い", "spell_jp": "さむい", "spell_en": "samui", "name": "冷" }
-            ,{ "id": 178, "word": "冷たい", "spell_jp": "つめたい", "spell_en": "tsumetai", "name": "冷" }
-            ,{ "id": 179, "word": "暖かい", "spell_jp": "あたたかい", "spell_en": "atatakai", "name": "溫" }
-            ,{ "id": 180, "word": "涼しい", "spell_jp": "すずしい", "spell_en": "suzushii", "name": "涼" }
-            ,{ "id": 181, "word": "厚い", "spell_jp": "あつい", "spell_en": "atsui", "name": "厚" }
-            ,{ "id": 182, "word": "薄い", "spell_jp": "うすい", "spell_en": "usui", "name": "薄" }
-            ,{ "id": 183, "word": "近い", "spell_jp": "ちかい", "spell_en": "chikai", "name": "近" }
-            ,{ "id": 184, "word": "遠い", "spell_jp": "とおい", "spell_en": "tooi", "name": "遠" }
-            ,{ "id": 185, "word": "弱い", "spell_jp": "よわい", "spell_en": "yowai", "name": "弱" }
-            ,{ "id": 186, "word": "強い", "spell_jp": "つよい", "spell_en": "tsuyoi", "name": "強" }
-            ,{ "id": 187, "word": "軽い", "spell_jp": "かるい", "spell_en": "karui", "name": "輕" }
-            ,{ "id": 188, "word": "重い", "spell_jp": "おもい", "spell_en": "omoi", "name": "重" }
-            ,{ "id": 189, "word": "狭い", "spell_jp": "せまい", "spell_en": "semai", "name": "窄" }
-            ,{ "id": 190, "word": "広い", "spell_jp": "ひろい", "spell_en": "hiroi", "name": "寬" }
-            ,{ "id": 191, "word": "早い", "spell_jp": "はやい", "spell_en": "hayai", "name": "早" }
-            ,{ "id": 192, "word": "速い", "spell_jp": "はやい", "spell_en": "hayai", "name": "快" }
-            ,{ "id": 193, "word": "遅い", "spell_jp": "おそい", "spell_en": "osoi", "name": "慢" }
-            ,{ "id": 194, "word": "太い", "spell_jp": "ふとい", "spell_en": "futoi", "name": "粗" }
-            ,{ "id": 195, "word": "細い", "spell_jp": "ほそい", "spell_en": "hosoi", "name": "細" }
-            ,{ "id": 196, "word": "短い", "spell_jp": "みじかい", "spell_en": "mijikai", "name": "短" }
-            ,{ "id": 197, "word": "長い", "spell_jp": "ながい", "spell_en": "nagai", "name": "長" }
-            ,{ "id": 198, "word": "安い", "spell_jp": "やすい", "spell_en": "yasui", "name": "便宜" }
-            ,{ "id": 199, "word": "高い", "spell_jp": "たかい", "spell_en": "takai", "name": "高" }
-            ,{ "id": 200, "word": "低い", "spell_jp": "ひくい", "spell_en": "hikui", "name": "低" }
-            ,{ "id": 201, "word": "良い", "spell_jp": "いい", "spell_en": "ii", "name": "好" }
-            ,{ "id": 202, "word": "悪い", "spell_jp": "わるい", "spell_en": "warui", "name": "壞" }
-            ,{ "id": 203, "word": "汚い", "spell_jp": "きたない", "spell_en": "kitanai", "name": "骯髒" }
-            ,{ "id": 204, "word": "新しい", "spell_jp": "あたらしい", "spell_en": "atarashii", "name": "新" }
-            ,{ "id": 205, "word": "古い", "spell_jp": "ふるい", "spell_en": "furui", "name": "舊" }
-            ,{ "id": 206, "word": "面白い", "spell_jp": "おもしろい", "spell_en": "omoshiroi", "name": "有趣" }
-            ,{ "id": 207, "word": "つまらない", "spell_jp": "つまらない", "spell_en": "tsumaranai", "name": "無聊" }
-            ,{ "id": 208, "word": "大きい", "spell_jp": "おおきい", "spell_en": "ookii", "name": "大" }
-            ,{ "id": 209, "word": "小さい", "spell_jp": "ちいさい", "spell_en": "chiisai", "name": "小" }
-            ,{ "id": 210, "word": "甘い", "spell_jp": "あまい", "spell_en": "amai", "name": "甜" }
-            ,{ "id": 211, "word": "美味しい", "spell_jp": "おいしい", "spell_en": "oishii", "name": "好吃" }
-            ,{ "id": 212, "word": "まずい", "spell_jp": "まずい", "spell_en": "mazui", "name": "不好吃" }
-            ,{ "id": 213, "word": "易しい", "spell_jp": "やさしい", "spell_en": "yasashii", "name": "容易" }
-            ,{ "id": 214, "word": "難しい", "spell_jp": "むずかしい", "spell_en": "muzukashii", "name": "難" }
-            ,{ "id": 215, "word": "優しい", "spell_jp": "やさしい", "spell_en": "yasashii", "name": "溫柔" }
-            ,{ "id": 216, "word": "厳しい", "spell_jp": "きびしい", "spell_en": "kibishii", "name": "嚴厲" }
-            ,{ "id": 217, "word": "暗い", "spell_jp": "くらい", "spell_en": "kurai", "name": "暗" }
-            ,{ "id": 218, "word": "明るい", "spell_jp": "あかるい", "spell_en": "akarui", "name": "明" }
-            ,{ "id": 219, "word": "忙しい", "spell_jp": "いそがしい", "spell_en": "isogashii", "name": "忙" }
-            ,{ "id": 220, "word": "可愛い", "spell_jp": "かわいい", "spell_en": "kawaii", "name": "可愛" }
-            ,{ "id": 221, "word": "楽しい", "spell_jp": "たのしい", "spell_en": "tanoshii", "name": "快樂" }
-            ,{ "id": 222, "word": "うるさい", "spell_jp": "うるさい", "spell_en": "urusai", "name": "吵" }
-            ,{ "id": 223, "word": "綺麗", "spell_jp": "きれい", "spell_en": "kirei", "name": "美麗" }
-            ,{ "id": 224, "word": "便利", "spell_jp": "べんり", "spell_en": "benri", "name": "方便" }
-            ,{ "id": 225, "word": "有名", "spell_jp": "ゆうめい", "spell_en": "yuumei", "name": "有名" }
-            ,{ "id": 226, "word": "静か", "spell_jp": "しずか", "spell_en": "shizuka", "name": "安靜" }
-            ,{ "id": 227, "word": "賑やか", "spell_jp": "にぎやか", "spell_en": "nigiyaka", "name": "熱鬧" }
+            , { "id": 2, "word": "家族", "spell_jp": "かぞく", "spell_en": "kazoku", "name": "家庭" }
+            , { "id": 3, "word": "両親", "spell_jp": "りょうしん", "spell_en": "ryoushin", "name": "父母" }
+            , { "id": 4, "word": "祖父", "spell_jp": "そふ", "spell_en": "sofu", "name": "祖父" }
+            , { "id": 5, "word": "祖母", "spell_jp": "そぼ", "spell_en": "sobo", "name": "祖母" }
+            , { "id": 6, "word": "父", "spell_jp": "ちち", "spell_en": "chichi", "name": "父親" }
+            , { "id": 7, "word": "母", "spell_jp": "はは", "spell_en": "haha", "name": "母親" }
+            , { "id": 8, "word": "兄弟", "spell_jp": "きょうだい", "spell_en": "kyoudai", "name": "兄弟姐妹" }
+            , { "id": 9, "word": "兄", "spell_jp": "あに", "spell_en": "ani", "name": "家兄、我哥哥" }
+            , { "id": 10, "word": "姉", "spell_jp": "あね", "spell_en": "ane", "name": "家姊、我姊姊" }
+            , { "id": 11, "word": "弟", "spell_jp": "おとうと", "spell_en": "otouto", "name": "舍弟、我弟弟" }
+            , { "id": 12, "word": "妹", "spell_jp": "いもうと", "spell_en": "imouto", "name": "舍妹、我妹妹" }
+            , { "id": 13, "word": "先生", "spell_jp": "せんせい", "spell_en": "sensei", "name": "老師" }
+            , { "id": 14, "word": "学生", "spell_jp": "がくせい", "spell_en": "gakusei", "name": "學生" }
+            , { "id": 15, "word": "友達", "spell_jp": "ともだち", "spell_en": "tomodachi", "name": "朋友" }
+            , { "id": 16, "word": "親友", "spell_jp": "しんゆう", "spell_en": "shin'yuu", "name": "摯友" }
+            , { "id": 17, "word": "警察", "spell_jp": "けいさつ", "spell_en": "keisatsu", "name": "警察" }
+            , { "id": 18, "word": "会社員", "spell_jp": "かいしゃいん", "spell_en": "kaishain", "name": "公司員工" }
+            , { "id": 19, "word": "店", "spell_jp": "みせ", "spell_en": "mise", "name": "商店" }
+            , { "id": 20, "word": "駅", "spell_jp": "えき", "spell_en": "eki", "name": "車站" }
+            , { "id": 21, "word": "道", "spell_jp": "みち", "spell_en": "michi", "name": "道路" }
+            , { "id": 22, "word": "家", "spell_jp": "いえ", "spell_en": "ie", "name": "家" }
+            , { "id": 23, "word": "部屋", "spell_jp": "へや", "spell_en": "heya", "name": "房間" }
+            , { "id": 24, "word": "建物", "spell_jp": "たてもの", "spell_en": "tatemono", "name": "建築物" }
+            , { "id": 25, "word": "レストラン", "spell_jp": "れすとらん", "spell_en": "resutoran", "name": "餐廳" }
+            , { "id": 26, "word": "会社", "spell_jp": "かいしゃ", "spell_en": "kaisha", "name": "公司" }
+            , { "id": 27, "word": "銀行", "spell_jp": "ぎんこう", "spell_en": "ginkou", "name": "銀行" }
+            , { "id": 28, "word": "公園", "spell_jp": "こうえん", "spell_en": "kouen", "name": "公園" }
+            , { "id": 29, "word": "病院", "spell_jp": "びょういん", "spell_en": "byouin", "name": "醫院" }
+            , { "id": 30, "word": "学校", "spell_jp": "がっこう", "spell_en": "gakkou", "name": "學校" }
+            , { "id": 31, "word": "教室", "spell_jp": "きょうしつ", "spell_en": "kyoushitsu", "name": "教室" }
+            , { "id": 32, "word": "地下鉄", "spell_jp": "ちかてつ", "spell_en": "chikatetsu", "name": "地鐵" }
+            , { "id": 33, "word": "バス停", "spell_jp": "ばすてい", "spell_en": "basutei", "name": "公車站" }
+            , { "id": 34, "word": "喫茶店", "spell_jp": "きっさてん", "spell_en": "kissaten", "name": "咖啡店" }
+            , { "id": 35, "word": "郵便局", "spell_jp": "ゆうびんきょく", "spell_en": "yuubinkyoku", "name": "郵局" }
+            , { "id": 36, "word": "図書館", "spell_jp": "としょかん", "spell_en": "toshokan", "name": "圖書館" }
+            , { "id": 37, "word": "映画館", "spell_jp": "えいがかん", "spell_en": "eigakan", "name": "電影院" }
+            , { "id": 38, "word": "交差点", "spell_jp": "こうさてん", "spell_en": "kousaten", "name": "交叉口" }
+            , { "id": 39, "word": "入り口", "spell_jp": "いりぐち", "spell_en": "iriguchi", "name": "入口" }
+            , { "id": 40, "word": "出口", "spell_jp": "でぐち", "spell_en": "deguchi", "name": "出口" }
+            , { "id": 41, "word": "アパート", "spell_jp": "あぱーと", "spell_en": "apaato", "name": "公寓" }
+            , { "id": 42, "word": "デパート", "spell_jp": "でばーと", "spell_en": "depaato", "name": "百貨公司" }
+            , { "id": 43, "word": "エレベーター", "spell_jp": "えれべーたー", "spell_en": "erebeetaa", "name": "電梯" }
+            , { "id": 44, "word": "ホテル", "spell_jp": "ほてる", "spell_en": "hoteru", "name": "飯店" }
+            , { "id": 45, "word": "トイレ", "spell_jp": "といれ", "spell_en": "toire", "name": "廁所" }
+            , { "id": 46, "word": "場所", "spell_jp": "ばしょ", "spell_en": "basho", "name": "地點" }
+            , { "id": 47, "word": "所", "spell_jp": "ところ", "spell_en": "tokoro", "name": "地方" }
+            , { "id": 48, "word": "食べ物", "spell_jp": "たべもの", "spell_en": "tabemono", "name": "食物" }
+            , { "id": 49, "word": "ご飯", "spell_jp": "ごはん", "spell_en": "gohan", "name": "米飯" }
+            , { "id": 50, "word": "果物", "spell_jp": "くだもの", "spell_en": "kudamono", "name": "水果" }
+            , { "id": 51, "word": "お菓子", "spell_jp": "おかし", "spell_en": "okashi", "name": "糖果" }
+            , { "id": 52, "word": "カレー", "spell_jp": "かれー", "spell_en": "karee", "name": "咖喱" }
+            , { "id": 53, "word": "パン", "spell_jp": "ぱん", "spell_en": "pan", "name": "麵包" }
+            , { "id": 54, "word": "料理", "spell_jp": "りょうり", "spell_en": "ryouri", "name": "料理" }
+            , { "id": 55, "word": "魚", "spell_jp": "さかな", "spell_en": "sakana", "name": "魚" }
+            , { "id": 56, "word": "肉", "spell_jp": "にく", "spell_en": "niku", "name": "肉" }
+            , { "id": 57, "word": "牛肉", "spell_jp": "ぎゅうにく", "spell_en": "gyuuniku", "name": "牛肉" }
+            , { "id": 58, "word": "豚肉", "spell_jp": "ぶたにく", "spell_en": "butaniku", "name": "豬肉" }
+            , { "id": 59, "word": "鶏肉", "spell_jp": "とりにく", "spell_en": "toriniku", "name": "雞肉" }
+            , { "id": 60, "word": "野菜", "spell_jp": "やさい", "spell_en": "yasai", "name": "蔬菜" }
+            , { "id": 61, "word": "玉子、卵、たまご", "spell_jp": "たまご", "spell_en": "tamago", "name": "蛋" }
+            , { "id": 62, "word": "醤油", "spell_jp": "しょうゆ", "spell_en": "shouyu", "name": "醬油" }
+            , { "id": 63, "word": "飲み物", "spell_jp": "のみもの", "spell_en": "nomimono", "name": "飲料" }
+            , { "id": 64, "word": "水", "spell_jp": "みず", "spell_en": "mizu", "name": "水" }
+            , { "id": 65, "word": "お茶", "spell_jp": "おちゃ", "spell_en": "ocha", "name": "茶" }
+            , { "id": 66, "word": "紅茶", "spell_jp": "こうちゃ", "spell_en": "koucha", "name": "紅茶" }
+            , { "id": 67, "word": "牛乳", "spell_jp": "ぎゅうにゅう", "spell_en": "gyuunyuu", "name": "牛奶" }
+            , { "id": 68, "word": "お酒", "spell_jp": "おさけ", "spell_en": "osake", "name": "酒" }
+            , { "id": 69, "word": "ビール", "spell_jp": "びーる", "spell_en": "biiru", "name": "啤酒" }
+            , { "id": 70, "word": "コーヒー", "spell_jp": "こーひー", "spell_en": "koohii", "name": "咖啡" }
+            , { "id": 71, "word": "ジュース", "spell_jp": "じゅーす", "spell_en": "juusu", "name": "果汁" }
+            , { "id": 72, "word": "服", "spell_jp": "ふく", "spell_en": "fuku", "name": "衣服" }
+            , { "id": 73, "word": "洋服", "spell_jp": "ようふく", "spell_en": "youfuku", "name": "西裝" }
+            , { "id": 74, "word": "コート", "spell_jp": "こーと", "spell_en": "kooto", "name": "外套" }
+            , { "id": 75, "word": "シャツ", "spell_jp": "しゃつ", "spell_en": "shatsu", "name": "襯衫" }
+            , { "id": 76, "word": "Tシャツ", "spell_jp": "Tしゃつ", "spell_en": "T-shatsu", "name": "T恤" }
+            , { "id": 77, "word": "セーター", "spell_jp": "せーたー", "spell_en": "seetaa", "name": "毛衣" }
+            , { "id": 78, "word": "ポケット", "spell_jp": "ぽけっと", "spell_en": "poketto", "name": "口袋" }
+            , { "id": 79, "word": "ボタン", "spell_jp": "ぼたん", "spell_en": "botan", "name": "鈕扣" }
+            , { "id": 80, "word": "ズボン", "spell_jp": "ずぼん", "spell_en": "zubon", "name": "褲子" }
+            , { "id": 81, "word": "半ズボン", "spell_jp": "はんズボン", "spell_en": "hanzubon", "name": "短褲" }
+            , { "id": 82, "word": "スカート", "spell_jp": "すかーと", "spell_en": "sukaato", "name": "裙子" }
+            , { "id": 83, "word": "靴", "spell_jp": "くつ", "spell_en": "kutsu", "name": "鞋子" }
+            , { "id": 84, "word": "靴下", "spell_jp": "くつした", "spell_en": "kutsushita", "name": "襪子" }
+            , { "id": 85, "word": "本", "spell_jp": "ほん", "spell_en": "hon", "name": "書籍" }
+            , { "id": 86, "word": "紙", "spell_jp": "かみ", "spell_en": "kami", "name": "紙" }
+            , { "id": 87, "word": "地図", "spell_jp": "ちず", "spell_en": "chizu", "name": "地圖" }
+            , { "id": 88, "word": "辞書", "spell_jp": "じしょ", "spell_en": "jisho", "name": "辭典" }
+            , { "id": 89, "word": "手紙", "spell_jp": "てがみ", "spell_en": "tegami", "name": "信件" }
+            , { "id": 90, "word": "切手", "spell_jp": "きって", "spell_en": "kitte", "name": "郵票" }
+            , { "id": 91, "word": "本棚", "spell_jp": "ほんだな", "spell_en": "hondana", "name": "書架" }
+            , { "id": 92, "word": "鉛筆", "spell_jp": "えんぴつ", "spell_en": "enpitsu", "name": "鉛筆" }
+            , { "id": 93, "word": "定規", "spell_jp": "じょうぎ", "spell_en": "jougi", "name": "尺規" }
+            , { "id": 94, "word": "万年筆", "spell_jp": "まんねんひつ", "spell_en": "mannenhitsu", "name": "鋼筆" }
+            , { "id": 95, "word": "消しゴム", "spell_jp": "けしごむ", "spell_en": "keshigomu", "name": "橡皮擦" }
+            , { "id": 96, "word": "ペン", "spell_jp": "ぺん", "spell_en": "pen", "name": "筆" }
+            , { "id": 97, "word": "ノート", "spell_jp": "のーと", "spell_en": "nooto", "name": "筆記本" }
+            , { "id": 98, "word": "ボールペン", "spell_jp": "ぼーるぺん", "spell_en": "boorupen", "name": "原子筆" }
+            , { "id": 99, "word": "シャープペンシル", "spell_jp": "しゃーぷぺんしる", "spell_en": "shaapupenshiru", "name": "自動鉛筆" }
+            , { "id": 100, "word": "電話", "spell_jp": "でんわ", "spell_en": "denwa", "name": "電話" }
+            , { "id": 101, "word": "冷蔵庫", "spell_jp": "れいぞうこ", "spell_en": "reizouko", "name": "冰箱" }
+            , { "id": 102, "word": "洗濯機", "spell_jp": "せんたくき", "spell_en": "sentakuki", "name": "洗衣機" }
+            , { "id": 103, "word": "テレビ", "spell_jp": "てれび", "spell_en": "terebi", "name": "電視" }
+            , { "id": 104, "word": "ビデオ", "spell_jp": "びでお", "spell_en": "bideo", "name": "錄影機" }
+            , { "id": 105, "word": "カメラ", "spell_jp": "かめら", "spell_en": "kamera", "name": "相機" }
+            , { "id": 106, "word": "パソコン", "spell_jp": "ぱそこん", "spell_en": "pasokon", "name": "電腦" }
+            , { "id": 107, "word": "エアコン", "spell_jp": "えあこん", "spell_en": "eakon", "name": "空調" }
+            , { "id": 108, "word": "上", "spell_jp": "うえ", "spell_en": "ue", "name": "上" }
+            , { "id": 109, "word": "下", "spell_jp": "した", "spell_en": "shita", "name": "下" }
+            , { "id": 110, "word": "左", "spell_jp": "ひだり", "spell_en": "hidari", "name": "左" }
+            , { "id": 111, "word": "右", "spell_jp": "みぎ", "spell_en": "migi", "name": "右" }
+            , { "id": 112, "word": "中", "spell_jp": "なか", "spell_en": "naka", "name": "中，之中，其中" }
+            , { "id": 113, "word": "前", "spell_jp": "まえ", "spell_en": "mae", "name": "前" }
+            , { "id": 114, "word": "後ろ", "spell_jp": "うしろ", "spell_en": "ushiro", "name": "後" }
+            , { "id": 115, "word": "東", "spell_jp": "ひがし", "spell_en": "higashi", "name": "東" }
+            , { "id": 116, "word": "西", "spell_jp": "にし", "spell_en": "nishi", "name": "西" }
+            , { "id": 117, "word": "南", "spell_jp": "みなみ", "spell_en": "minami", "name": "南" }
+            , { "id": 118, "word": "北", "spell_jp": "きた", "spell_en": "kita", "name": "北" }
+            , { "id": 119, "word": "内", "spell_jp": "うち", "spell_en": "uchi", "name": "內部" }
+            , { "id": 120, "word": "外", "spell_jp": "そと", "spell_en": "soto", "name": "外部" }
+            , { "id": 121, "word": "辺", "spell_jp": "へん", "spell_en": "hen", "name": "周邊" }
+            , { "id": 122, "word": "隣", "spell_jp": "となり", "spell_en": "tonari", "name": "旁邊" }
+            , { "id": 123, "word": "横", "spell_jp": "よこ", "spell_en": "yoko", "name": "橫" }
+            , { "id": 124, "word": "1", "spell_jp": "いち", "spell_en": "ichi", "name": "一" }
+            , { "id": 125, "word": "2", "spell_jp": "に", "spell_en": "ni", "name": "二" }
+            , { "id": 126, "word": "3", "spell_jp": "さん", "spell_en": "san", "name": "三" }
+            , { "id": 127, "word": "4", "spell_jp": "よん", "spell_en": "yon", "name": "四" }
+            , { "id": 128, "word": "5", "spell_jp": "ご", "spell_en": "go", "name": "五" }
+            , { "id": 129, "word": "6", "spell_jp": "ろく", "spell_en": "roku", "name": "六" }
+            , { "id": 130, "word": "7", "spell_jp": "しち/なな", "spell_en": "shichi/nana", "name": "七" }
+            , { "id": 131, "word": "8", "spell_jp": "はち", "spell_en": "hachi", "name": "八" }
+            , { "id": 132, "word": "9", "spell_jp": "きゅう", "spell_en": "kyuu", "name": "九" }
+            , { "id": 133, "word": "10", "spell_jp": "じゅう", "spell_en": "juu", "name": "十" }
+            , { "id": 134, "word": "会う", "spell_jp": "あう", "spell_en": "au", "name": "見面" }
+            , { "id": 135, "word": "遊ぶ", "spell_jp": "あそぶ", "spell_en": "asobu", "name": "玩" }
+            , { "id": 136, "word": "歩く", "spell_jp": "あるく", "spell_en": "aruku", "name": "走" }
+            , { "id": 137, "word": "言う", "spell_jp": "いう", "spell_en": "iu", "name": "說" }
+            , { "id": 138, "word": "行く", "spell_jp": "いく", "spell_en": "iku", "name": "去" }
+            , { "id": 139, "word": "要る", "spell_jp": "いる", "spell_en": "iru", "name": "需要" }
+            , { "id": 140, "word": "歌う", "spell_jp": "うたう", "spell_en": "utau", "name": "唱" }
+            , { "id": 141, "word": "泳ぐ", "spell_jp": "およぐ", "spell_en": "oyogu", "name": "游泳" }
+            , { "id": 142, "word": "終わる", "spell_jp": "おわる", "spell_en": "owaru", "name": "結束" }
+            , { "id": 143, "word": "教える", "spell_jp": "おしえる", "spell_en": "oshieru", "name": "教導" }
+            , { "id": 144, "word": "買う", "spell_jp": "かう", "spell_en": "kau", "name": "買" }
+            , { "id": 145, "word": "書く", "spell_jp": "かく", "spell_en": "kaku", "name": "寫" }
+            , { "id": 146, "word": "掛かる", "spell_jp": "かかる", "spell_en": "kakaru", "name": "掛上" }
+            , { "id": 147, "word": "帰る", "spell_jp": "かえる", "spell_en": "kaeru", "name": "歸" }
+            , { "id": 148, "word": "聞く", "spell_jp": "きく", "spell_en": "kiku", "name": "聽" }
+            , { "id": 149, "word": "答える", "spell_jp": "こたえる", "spell_en": "kotaeru", "name": "回答" }
+            , { "id": 150, "word": "困る", "spell_jp": "こまる", "spell_en": "komaru", "name": "困擾" }
+            , { "id": 151, "word": "来る", "spell_jp": "くる", "spell_en": "kuru", "name": "來" }
+            , { "id": 152, "word": "死ぬ", "spell_jp": "しぬ", "spell_en": "shinu", "name": "死" }
+            , { "id": 153, "word": "住む", "spell_jp": "すむ", "spell_en": "sumu", "name": "住" }
+            , { "id": 154, "word": "座る", "spell_jp": "すわる", "spell_en": "suwaru", "name": "坐" }
+            , { "id": 155, "word": "立つ", "spell_jp": "たつ", "spell_en": "tatsu", "name": "立" }
+            , { "id": 156, "word": "食べる", "spell_jp": "たべる", "spell_en": "taberu", "name": "吃" }
+            , { "id": 157, "word": "疲れる", "spell_jp": "つかれる", "spell_en": "tsukareru", "name": "累" }
+            , { "id": 158, "word": "着く", "spell_jp": "つく", "spell_en": "tsuku", "name": "到達" }
+            , { "id": 159, "word": "使う", "spell_jp": "つかう", "spell_en": "tsukau", "name": "使用" }
+            , { "id": 160, "word": "作る", "spell_jp": "つくる", "spell_en": "tsukuru", "name": "製作，創作；建立" }
+            , { "id": 161, "word": "止まる", "spell_jp": "とまる", "spell_en": "tomaru", "name": "停" }
+            , { "id": 162, "word": "飛ぶ", "spell_jp": "とぶ", "spell_en": "tobu", "name": "飛" }
+            , { "id": 163, "word": "泣く", "spell_jp": "なく", "spell_en": "naku", "name": "哭" }
+            , { "id": 164, "word": "寝る", "spell_jp": "ねる", "spell_en": "neru", "name": "睡" }
+            , { "id": 165, "word": "乗る", "spell_jp": "のる", "spell_en": "noru", "name": "乘" }
+            , { "id": 166, "word": "飲む", "spell_jp": "のむ", "spell_en": "nomu", "name": "喝" }
+            , { "id": 167, "word": "違う", "spell_jp": "ちがう", "spell_en": "chigau", "name": "不對，不是，錯了" }
+            , { "id": 168, "word": "並ぶ", "spell_jp": "ならぶ", "spell_en": "narabu", "name": "排列" }
+            , { "id": 169, "word": "入る", "spell_jp": "はいる", "spell_en": "hairu", "name": "進入" }
+            , { "id": 170, "word": "始まる", "spell_jp": "はじまる", "spell_en": "hajimaru", "name": "開始" }
+            , { "id": 171, "word": "走る", "spell_jp": "はしる", "spell_en": "hashiru", "name": "奔跑" }
+            , { "id": 172, "word": "降る", "spell_jp": "ふる", "spell_en": "furu", "name": "下（雨）" }
+            , { "id": 173, "word": "見る", "spell_jp": "みる", "spell_en": "miru", "name": "看" }
+            , { "id": 174, "word": "待つ", "spell_jp": "まつ", "spell_en": "matsu", "name": "等" }
+            , { "id": 175, "word": "読む", "spell_jp": "よむ", "spell_en": "yomu", "name": "讀" }
+            , { "id": 176, "word": "暑い", "spell_jp": "あつい", "spell_en": "atsui", "name": "熱" }
+            , { "id": 177, "word": "寒い", "spell_jp": "さむい", "spell_en": "samui", "name": "冷" }
+            , { "id": 178, "word": "冷たい", "spell_jp": "つめたい", "spell_en": "tsumetai", "name": "冷" }
+            , { "id": 179, "word": "暖かい", "spell_jp": "あたたかい", "spell_en": "atatakai", "name": "溫暖、暖和" }
+            , { "id": 180, "word": "涼しい", "spell_jp": "すずしい", "spell_en": "suzushii", "name": "涼" }
+            , { "id": 181, "word": "厚い", "spell_jp": "あつい", "spell_en": "atsui", "name": "厚" }
+            , { "id": 182, "word": "薄い", "spell_jp": "うすい", "spell_en": "usui", "name": "薄" }
+            , { "id": 183, "word": "近い", "spell_jp": "ちかい", "spell_en": "chikai", "name": "近" }
+            , { "id": 184, "word": "遠い", "spell_jp": "とおい", "spell_en": "tooi", "name": "遠" }
+            , { "id": 185, "word": "弱い", "spell_jp": "よわい", "spell_en": "yowai", "name": "弱" }
+            , { "id": 186, "word": "強い", "spell_jp": "つよい", "spell_en": "tsuyoi", "name": "強" }
+            , { "id": 187, "word": "軽い", "spell_jp": "かるい", "spell_en": "karui", "name": "輕" }
+            , { "id": 188, "word": "重い", "spell_jp": "おもい", "spell_en": "omoi", "name": "重" }
+            , { "id": 189, "word": "狭い", "spell_jp": "せまい", "spell_en": "semai", "name": "窄" }
+            , { "id": 190, "word": "広い", "spell_jp": "ひろい", "spell_en": "hiroi", "name": "寬" }
+            , { "id": 191, "word": "早い", "spell_jp": "はやい", "spell_en": "hayai", "name": "早" }
+            , { "id": 192, "word": "速い", "spell_jp": "はやい", "spell_en": "hayai", "name": "快" }
+            , { "id": 193, "word": "遅い", "spell_jp": "おそい", "spell_en": "osoi", "name": "慢、晚" }
+            , { "id": 194, "word": "太い", "spell_jp": "ふとい", "spell_en": "futoi", "name": "粗" }
+            , { "id": 195, "word": "細い", "spell_jp": "ほそい", "spell_en": "hosoi", "name": "細" }
+            , { "id": 196, "word": "短い", "spell_jp": "みじかい", "spell_en": "mijikai", "name": "短" }
+            , { "id": 197, "word": "長い", "spell_jp": "ながい", "spell_en": "nagai", "name": "長" }
+            , { "id": 198, "word": "安い", "spell_jp": "やすい", "spell_en": "yasui", "name": "便宜" }
+            , { "id": 199, "word": "高い", "spell_jp": "たかい", "spell_en": "takai", "name": "高" }
+            , { "id": 200, "word": "低い", "spell_jp": "ひくい", "spell_en": "hikui", "name": "低" }
+            , { "id": 201, "word": "良い", "spell_jp": "いい", "spell_en": "ii", "name": "好" }
+            , { "id": 202, "word": "悪い", "spell_jp": "わるい", "spell_en": "warui", "name": "壞" }
+            , { "id": 203, "word": "汚い", "spell_jp": "きたない", "spell_en": "kitanai", "name": "骯髒" }
+            , { "id": 204, "word": "新しい", "spell_jp": "あたらしい", "spell_en": "atarashii", "name": "新" }
+            , { "id": 205, "word": "古い", "spell_jp": "ふるい", "spell_en": "furui", "name": "舊" }
+            , { "id": 206, "word": "面白い", "spell_jp": "おもしろい", "spell_en": "omoshiroi", "name": "有趣" }
+            , { "id": 207, "word": "つまらない", "spell_jp": "つまらない", "spell_en": "tsumaranai", "name": "無聊" }
+            , { "id": 208, "word": "大きい", "spell_jp": "おおきい", "spell_en": "ookii", "name": "大" }
+            , { "id": 209, "word": "小さい", "spell_jp": "ちいさい", "spell_en": "chiisai", "name": "小" }
+            , { "id": 210, "word": "甘い", "spell_jp": "あまい", "spell_en": "amai", "name": "甜" }
+            , { "id": 211, "word": "美味しい", "spell_jp": "おいしい", "spell_en": "oishii", "name": "好吃" }
+            , { "id": 212, "word": "まずい", "spell_jp": "まずい", "spell_en": "mazui", "name": "不好吃" }
+            , { "id": 213, "word": "易しい", "spell_jp": "やさしい", "spell_en": "yasashii", "name": "容易" }
+            , { "id": 214, "word": "難しい", "spell_jp": "むずかしい", "spell_en": "muzukashii", "name": "難" }
+            , { "id": 215, "word": "優しい", "spell_jp": "やさしい", "spell_en": "yasashii", "name": "溫柔" }
+            , { "id": 216, "word": "厳しい", "spell_jp": "きびしい", "spell_en": "kibishii", "name": "嚴厲" }
+            , { "id": 217, "word": "暗い", "spell_jp": "くらい", "spell_en": "kurai", "name": "暗" }
+            , { "id": 218, "word": "明るい", "spell_jp": "あかるい", "spell_en": "akarui", "name": "（性格）開朗" }
+            , { "id": 219, "word": "忙しい", "spell_jp": "いそがしい", "spell_en": "isogashii", "name": "忙" }
+            , { "id": 220, "word": "可愛い", "spell_jp": "かわいい", "spell_en": "kawaii", "name": "可愛" }
+            , { "id": 221, "word": "楽しい", "spell_jp": "たのしい", "spell_en": "tanoshii", "name": "快樂" }
+            , { "id": 222, "word": "うるさい", "spell_jp": "うるさい", "spell_en": "urusai", "name": "吵" }
+            , { "id": 223, "word": "綺麗", "spell_jp": "きれい", "spell_en": "kirei", "name": "美麗" }
+            , { "id": 224, "word": "便利", "spell_jp": "べんり", "spell_en": "benri", "name": "方便" }
+            , { "id": 225, "word": "有名", "spell_jp": "ゆうめい", "spell_en": "yuumei", "name": "有名" }
+            , { "id": 226, "word": "静か", "spell_jp": "しずか", "spell_en": "shizuka", "name": "安靜" }
+            , { "id": 227, "word": "賑やか", "spell_jp": "にぎやか", "spell_en": "nigiyaka", "name": "熱鬧" }
+            , { "id": 228, "word": "弟さん", "spell_jp": "おとうとさん", "spell_en": "otouto san", "name": "令弟、您弟弟" }
+            , { "id": 229, "word": "妹さん", "spell_jp": "いもうとさん", "spell_en": "imouto san", "name": "令妹、您妹妹" }
+            , { "id": 230, "word": "歌", "spell_jp": "うた", "spell_en": "uta", "name": "歌" }
+
+            , { "id": 0, "word": "冰淇淋", "spell_jp": "アイスクリーム", "spell_en": "aisukuriimu", "name": "冰淇淋"}
+            , { "id": 0, "word": "間", "spell_jp": "あいだ", "spell_en": "aida", "name": "之間、中間、間隔" }
+            , { "id": 0, "word": "青", "spell_jp": "あお", "spell_en": "ao", "name": "藍、藍色" }
+            , { "id": 0, "word": "青い", "spell_jp": "あおい", "spell_en": "aoi", "name": "藍色的" }
+            , { "id": 0, "word": "赤", "spell_jp": "あか", "spell_en": "aka", "name": "紅、紅色" }
+            , { "id": 0, "word": "赤い", "spell_jp": "あかい", "spell_en": "akai", "name": "紅色的" }
+            , { "id": 0, "word": "開けます", "spell_jp": "あけます", "spell_en": "akemasu", "name": "打開、開" }
+            , { "id": 0, "word": "あげます", "spell_jp": "あげます", "spell_en": "agemasu", "name": "給、給予" }
+            , { "id": 0, "word": "朝", "spell_jp": "あさ", "spell_en": "asa", "name": "早上" }
+            , { "id": 0, "word": "明後日", "spell_jp": "あさって", "spell_en": "asatte", "name": "後天" }
+            , { "id": 0, "word": "足", "spell_jp": "あし", "spell_en": "ashi", "name": "腳、腿" }
+            , { "id": 0, "word": "明日", "spell_jp": "あした", "spell_en": "ashita", "name": "明天" }
+            , { "id": 0, "word": "あそこ", "spell_jp": "あそこ", "spell_en": "asoko", "name": "那兒、那裡" }
+            , { "id": 0, "word": "あちら", "spell_jp": "あちら", "spell_en": "achira", "name": "那邊" }
+            , { "id": 0, "word": "あっち", "spell_jp": "あっち", "spell_en": "acchi", "name": "那邊" }
+            , { "id": 0, "word": "後～", "spell_jp": "あと～", "spell_en": "ato～", "name": "～以後、再過～" }
+            , { "id": 0, "word": "あの", "spell_jp": "あの", "spell_en": "ano", "name": "那、那個" }
+            , { "id": 0, "word": "浴びます", "spell_jp": "あびます", "spell_en": "abimasu", "name": "沖（澡）、淋浴" }
+            , { "id": 0, "word": "危ない", "spell_jp": "あぶない", "spell_en": "abunai", "name": "危險" }
+            , { "id": 0, "word": "あまり～ない", "spell_jp": "あまり～ない", "spell_en": "amari～nai", "name": "不太～" }
+            , { "id": 0, "word": "雨", "spell_jp": "あめ", "spell_en": "ame", "name": "雨" }
+            , { "id": 0, "word": "アメリカ人", "spell_jp": "アメリカじん", "spell_en": "amerika jin", "name": "美國人" }
+            , { "id": 0, "word": "洗います", "spell_jp": "あらいます", "spell_en": "araimasu", "name": "洗" }
+            , { "id": 0, "word": "あります", "spell_jp": "あります", "spell_en": "arimasu", "name": "有、在(事物)" }
+            , { "id": 0, "word": "アルバイト", "spell_jp": "アルバイト", "spell_en": "arubaito", "name": "打工、兼職" }
+            , { "id": 0, "word": "あれ", "spell_jp": "あれ", "spell_en": "are", "name": "那、那個" }
+            , { "id": 0, "word": "いいえ", "spell_jp": "いいえ", "spell_en": "iie", "name": "不" }
+            , { "id": 0, "word": "言います", "spell_jp": "いいます", "spell_en": "iimasu", "name": "說、叫做" }
+            , { "id": 0, "word": "如何(いかが)", "spell_jp": "いかが", "spell_en": "ikaga", "name": "如何、怎麼樣" }
+            , { "id": 0, "word": "幾つ(いくつ)", "spell_jp": "いくつ", "spell_en": "ikutsu", "name": "幾歲、多大、（數量）多少個" }
+            , { "id": 0, "word": "幾ら(いくら)", "spell_jp": "いくら", "spell_en": "ikura", "name": "多少錢" }
+            , { "id": 0, "word": "医者", "spell_jp": "いしゃ", "spell_en": "isha", "name": "醫生" }
+            , { "id": 0, "word": "椅子(いす)", "spell_jp": "いす", "spell_en": "isu", "name": "椅子" }
+            , { "id": 0, "word": "急ぎます", "spell_jp": "いそぎます", "spell_en": "isogimasu", "name": "著急、急、趕緊" }
+            , { "id": 0, "word": "痛い", "spell_jp": "いたい", "spell_en": "itai", "name": "疼、疼痛" }
+            , { "id": 0, "word": "イタリア", "spell_jp": "イタリア", "spell_en": "itaria", "name": "義大利" }
+            , { "id": 0, "word": "一番", "spell_jp": "いちばん", "spell_en": "ichiban", "name": "最～、最好、最佳" }
+            , { "id": 0, "word": "いつ", "spell_jp": "いつ", "spell_en": "itsu", "name": "什麼時候、何時" }
+            , { "id": 0, "word": "いつも", "spell_jp": "いつも", "spell_en": "itsumo", "name": "總是" }
+            , { "id": 0, "word": "一緒に", "spell_jp": "いっしょに", "spell_en": "issho ni", "name": "一起" }
+            , { "id": 0, "word": "犬", "spell_jp": "いぬ", "spell_en": "inu", "name": "狗" }
+            , { "id": 0, "word": "今", "spell_jp": "いま", "spell_en": "ima", "name": "現在" }
+            , { "id": 0, "word": "今から", "spell_jp": "いまから", "spell_en": "ima kara", "name": "現在開始" }
+            , { "id": 0, "word": "います", "spell_jp": "います", "spell_en": "imasu", "name": "有、在(地點)" }
+            , { "id": 0, "word": "入れます", "spell_jp": "いれます", "spell_en": "iremasu", "name": "放入、加入" }
+            , { "id": 0, "word": "いろいろ", "spell_jp": "いろいろ", "spell_en": "iroiro", "name": "各種各樣、形形色色" }
+            , { "id": 0, "word": "インターネット", "spell_jp": "インターネット", "spell_en": "intaanetto", "name": "網際網路" }
+            , { "id": 0, "word": "インターネット（を）します", "spell_jp": "インターネットします", "spell_en": "intaanettoshimasu", "name": "上網" }
+            , { "id": 0, "word": "うち", "spell_jp": "うち", "spell_en": "uchi", "name": "家" }
+            , { "id": 0, "word": "生まれます", "spell_jp": "うまれます", "spell_en": "umaremasu", "name": "出生" }
+            , { "id": 0, "word": "海", "spell_jp": "うみ", "spell_en": "umi", "name": "海、大海、海洋" }
+            , { "id": 0, "word": "裏", "spell_jp": "うら", "spell_en": "ura", "name": "背後、背面、內部、幕後" }
+            , { "id": 0, "word": "売ります", "spell_jp": "うります", "spell_en": "urimasu", "name": "賣、銷售" }
+            , { "id": 0, "word": "うれしい", "spell_jp": "うれしい", "spell_en": "ureshii", "name": "高興、欣喜" }
+            , { "id": 0, "word": "うん", "spell_jp": "うん", "spell_en": "un", "name": "是、對、好" }
+            , { "id": 0, "word": "絵", "spell_jp": "え", "spell_en": "e", "name": "畫" }
+            , { "id": 0, "word": "映画", "spell_jp": "えいが", "spell_en": "eiga", "name": "電影" }
+            , { "id": 0, "word": "英語", "spell_jp": "えいご", "spell_en": "eigo", "name": "英語" }
+            , { "id": 0, "word": "ええ", "spell_jp": "ええ", "spell_en": "ee", "name": "是、對" }
+            , { "id": 0, "word": "駅前", "spell_jp": "えきまえ", "spell_en": "ekimae", "name": "車站前" }
+            , { "id": 0, "word": "多い", "spell_jp": "おおい", "spell_en": "ooi", "name": "多的" }
+            , { "id": 0, "word": "大勢", "spell_jp": "おおぜい", "spell_en": "oozei", "name": "很多（人）" }
+            , { "id": 0, "word": "お母さん", "spell_jp": "おかあさん", "spell_en": "okaasan", "name": "令堂、您母親" }
+            , { "id": 0, "word": "お金", "spell_jp": "おかね", "spell_en": "okane", "name": "錢" }
+            , { "id": 0, "word": "起きます", "spell_jp": "おきます", "spell_en": "okimasu", "name": "起床、起來" }
+            , { "id": 0, "word": "置きます", "spell_jp": "おきます", "spell_en": "okimasu", "name": "放、放置（東西）" }
+            , { "id": 0, "word": "お客様", "spell_jp": "おきゃくさま", "spell_en": "okyakusama", "name": "客人、顧客、客戶" }
+            , { "id": 0, "word": "奥さん", "spell_jp": "おくさん", "spell_en": "okusan", "name": "尊夫人、您妻子" }
+            , { "id": 0, "word": "お薬", "spell_jp": "おくすり", "spell_en": "okusuri", "name": "藥" }
+            , { "id": 0, "word": "送ります", "spell_jp": "おくります", "spell_en": "okurimasu", "name": "送、發送、寄送、送（人）" }
+            , { "id": 0, "word": "お酒", "spell_jp": "おさけ", "spell_en": "osake", "name": "酒" }
+            , { "id": 0, "word": "お爺さん", "spell_jp": "おじいさん", "spell_en": "ojiisan", "name": "您爺爺、您外公、老爺爺" }
+            , { "id": 0, "word": "お時間", "spell_jp": "おじかん", "spell_en": "ojikan", "name": "時間" }
+            , { "id": 0, "word": "お好きなもの", "spell_jp": "おすきなもの", "spell_en": "osuki na mono", "name": "（您）喜歡的東西" }
+            , { "id": 0, "word": "遅くまで", "spell_jp": "おそくまで", "spell_en": "osoku made", "name": "到很晚" }
+            , { "id": 0, "word": "夫", "spell_jp": "おっと", "spell_en": "otto", "name": "丈夫" }
+            , { "id": 0, "word": "お寺", "spell_jp": "おてら", "spell_en": "otera", "name": "廟、寺廟" }
+            , { "id": 0, "word": "お父さん", "spell_jp": "おとうさん", "spell_en": "otousan", "name": "令尊、您父親" }
+            , { "id": 0, "word": "男の子", "spell_jp": "おとこのこ", "spell_en": "otoko no ko", "name": "男孩" }
+            , { "id": 0, "word": "男の人", "spell_jp": "おとこのひと", "spell_en": "otoko no hito", "name": "男人、男子" }
+            , { "id": 0, "word": "一昨日", "spell_jp": "おととい", "spell_en": "ototoi", "name": "前天" }
+            , { "id": 0, "word": "お腹", "spell_jp": "おなか", "spell_en": "onaka", "name": "肚子" }
+            , { "id": 0, "word": "お兄さん", "spell_jp": "おにいさん", "spell_en": "oniisan", "name": "令兄、您哥哥" }
+            , { "id": 0, "word": "お姉さん", "spell_jp": "おねえさん", "spell_en": "oneesan", "name": "令姊、您姊姊" }
+            , { "id": 0, "word": "おばあさん", "spell_jp": "おばあさん", "spell_en": "obaasan", "name": "您奶奶、您外婆、老奶奶" }
+            , { "id": 0, "word": "お風呂", "spell_jp": "おふろ", "spell_en": "ofuro", "name": "浴室、澡堂" }
+            , { "id": 0, "word": "お弁当", "spell_jp": "おべんとう", "spell_en": "obentou", "name": "盒飯、便當" }
+            , { "id": 0, "word": "覚えます", "spell_jp": "おぼえます", "spell_en": "oboemasu", "name": "記、背、記住" }
+            , { "id": 0, "word": "お土産", "spell_jp": "おみやげ", "spell_en": "omiyage", "name": "伴手禮、禮品" }
+            , { "id": 0, "word": "重い", "spell_jp": "おもい", "spell_en": "omoi", "name": "重的" }
+            , { "id": 0, "word": "思います", "spell_jp": "おもいます", "spell_en": "omoimasu", "name": "想、認為、覺得、感覺" }
+            , { "id": 0, "word": "泳ぎます", "spell_jp": "およぎます", "spell_en": "oyogimasu", "name": "游泳" }
+            , { "id": 0, "word": "降ります", "spell_jp": "おります", "spell_en": "orimasu", "name": "下（車）" }
+            , { "id": 0, "word": "音楽", "spell_jp": "おんがく", "spell_en": "ongaku", "name": "音樂" }
+            , { "id": 0, "word": "温泉", "spell_jp": "おんせん", "spell_en": "onsen", "name": "溫泉" }
+            , { "id": 0, "word": "女の人", "spell_jp": "おんなのひと", "spell_en": "onna no hito", "name": "女人、女子" }
+            , { "id": 0, "word": "お話", "spell_jp": "おはなし", "spell_en": "ohanashi", "name": "話、故事" }
+            , { "id": 0, "word": "火", "spell_jp": "か", "spell_en": "ka", "name": "星期二、週二" }
+            , { "id": 0, "word": "会議", "spell_jp": "かいぎ", "spell_en": "kaigi", "name": "會議" }
+            , { "id": 0, "word": "会議（を）します", "spell_jp": "かいぎします", "spell_en": "kaigishimasu", "name": "開會、舉行會議" }
+            , { "id": 0, "word": "会議室", "spell_jp": "かいぎしつ", "spell_en": "kaigishitsu", "name": "會議室" }
+            , { "id": 0, "word": "外国", "spell_jp": "がいこく", "spell_en": "gaikoku", "name": "外國、國外" }
+            , { "id": 0, "word": "会社", "spell_jp": "かいしゃ", "spell_en": "kaisha", "name": "公司" }
+            , { "id": 0, "word": "会場", "spell_jp": "かいじょう", "spell_en": "kaijou", "name": "會場" }
+            , { "id": 0, "word": "買い物", "spell_jp": "かいもの", "spell_en": "kaimono", "name": "購物" }
+            , { "id": 0, "word": "買い物（を）します", "spell_jp": "かいものします", "spell_en": "kaimonoshimasu", "name": "買東西、購物" }
+            , { "id": 0, "word": "帰ってきます", "spell_jp": "かえってきます", "spell_en": "kaeddekimasu", "name": "歸還、反還" }
+            , { "id": 0, "word": "帰ります", "spell_jp": "かえります", "spell_en": "kaerimasu", "name": "回去" }
+            , { "id": 0, "word": "顔", "spell_jp": "かお", "spell_en": "kao", "name": "臉" }
+            , { "id": 0, "word": "かかります", "spell_jp": "かかります", "spell_en": "kakarimasu", "name": "花費(時間/金錢)" }
+            , { "id": 0, "word": "かぎ", "spell_jp": "かぎ", "spell_en": "kagi", "name": "鑰匙" } 
+            , { "id": 0, "word": "かけます", "spell_jp": "かけます", "spell_en": "kakemasu", "name": "打(電話)" } 
+            , { "id": 0, "word": "かさ", "spell_jp": "かさ", "spell_en": "kasa", "name": "傘" }
+            , { "id": 0, "word": "かします", "spell_jp": "かします", "spell_en": "kashimasu", "name": "借給" } 
+            , { "id": 0, "word": "方", "spell_jp": "かた", "spell_en": "kata", "name": "人" } 
+            , { "id": 0, "word": "～方", "spell_jp": "～かた", "spell_en": "～kata", "name": "各位、們「～たち」的禮貌表達" } 
+            , { "id": 0, "word": "形", "spell_jp": "かたち", "spell_en": "katachi", "name": "形狀" } 
+            , { "id": 0, "word": "かばん", "spell_jp": "かばん", "spell_en": "kaban", "name": "包" } 
+            , { "id": 0, "word": "かぶります", "spell_jp": "かぶります", "spell_en": "kaburimasu", "name": "戴(帽子)" } 
+            , { "id": 0, "word": "紙芝居", "spell_jp": "かみしばい", "spell_en": "kamishibai", "name": "紙劇場" } 
+            , { "id": 0, "word": "～から", "spell_jp": "～から", "spell_en": "～kara", "name": "從…" } 
+            , { "id": 0, "word": "辛い", "spell_jp": "からい", "spell_en": "karai", "name": "辣" } 
+            , { "id": 0, "word": "カラオケ", "spell_jp": "カラオケ", "spell_en": "karaoke", "name": "卡拉OK" } 
+            , { "id": 0, "word": "体", "spell_jp": "からだ", "spell_en": "karada", "name": "身體" } 
+            , { "id": 0, "word": "借ります", "spell_jp": "かります", "spell_en": "karimasu", "name": "借" } 
+            , { "id": 0, "word": "カレンダー", "spell_jp": "カレンダー", "spell_en": "karenda-", "name": "日曆" }
+            , { "id": 0, "word": "川", "spell_jp": "かわ", "spell_en": "kawa", "name": "河" } 
+            , { "id": 0, "word": "考えます", "spell_jp": "かんがえます", "spell_en": "kangaemasu", "name": "想" } 
+            , { "id": 0, "word": "漢字", "spell_jp": "かんじ", "spell_en": "kanji", "name": "漢字" }
+            , { "id": 0, "word": "簡単", "spell_jp": "かんたん", "spell_en": "kantan", "name": "簡單" } 
+            , { "id": 0, "word": "木", "spell_jp": "き", "spell_en": "ki", "name": "木" } 
+            , { "id": 0, "word": "ギター", "spell_jp": "ギター", "spell_en": "gita-", "name": "吉他" }
+            , { "id": 0, "word": "切符", "spell_jp": "きっぷ", "spell_en": "kippu", "name": "票" } 
+            , { "id": 0, "word": "昨日", "spell_jp": "きのう", "spell_en": "kinou", "name": "昨天" } 
+            , { "id": 0, "word": "着ます","spell_jp": "きます","spell_en": "kimasu","name": "穿" }
+            , { "id": 0, "word": "決まります","spell_jp": "きまります","spell_en": "kimarimasu","name": "決定" }
+            , { "id": 0, "word": "決めます","spell_jp": "きめます","spell_en": "kimemasu","name": "決定" }
+            , { "id": 0, "word": "気持ち","spell_jp": "きもち","spell_en": "kimochi","name": "心情" }
+            , { "id": 0, "word": "客","spell_jp": "きゃく","spell_en": "kyaku","name": "客人" }
+            , { "id": 0, "word": "今日","spell_jp": "きょう","spell_en": "kyou","name": "今天" }
+            , { "id": 0, "word": "去年","spell_jp": "きょねん","spell_en": "kyonen","name": "去年" }
+            , { "id": 0, "word": "嫌い","spell_jp": "きらい","spell_en": "kirai","name": "討厭" }
+            , { "id": 0, "word": "切ります","spell_jp": "きります","spell_en": "kirimasu","name": "切" }
+            , { "id": 0, "word": "きれい","spell_jp": "きれい","spell_en": "kirei","name": "乾淨" }
+            , { "id": 0, "word": "きれいに","spell_jp": "きれいに","spell_en": "kirei ni","name": "乾淨地" }
+            , { "id": 0, "word": "金","spell_jp": "きん","spell_en": "kin","name": "星期五" }
+            , { "id": 0, "word": "空港","spell_jp": "くうこう","spell_en": "kuukou","name": "機場" }
+            , { "id": 0, "word": "薬","spell_jp": "くすり","spell_en": "kusuri","name": "藥" }
+            , { "id": 0, "word": "ください","spell_jp": "ください","spell_en": "kudasai","name": "請" }
+            , { "id": 0, "word": "国","spell_jp": "くに","spell_en": "kuni","name": "國家" }
+            , { "id": 0, "word": "～くらい","spell_jp": "～くらい","spell_en": "～kurai","name": "大約" }
+            , { "id": 0, "word": "車","spell_jp": "くるま","spell_en": "kuruma","name": "車" }
+            , { "id": 0, "word": "黒い","spell_jp": "くろい","spell_en": "kuroi","name": "黑色的" }
+            , { "id": 0, "word": "けいたい電話","spell_jp": "けいたいでんわ","spell_en": "keitai denwa","name": "手機" }
+            , { "id": 0, "word": "ケーキ","spell_jp": "ケーキ","spell_en": "ke-ki","name": "蛋糕" }
+            , { "id": 0, "word": "ケース","spell_jp": "ケース","spell_en": "ke-su","name": "盒子" }
+            , { "id": 0, "word": "ゲーム","spell_jp": "ゲーム","spell_en": "ge-mu","name": "遊戲" }
+            , { "id": 0, "word": "今朝","spell_jp": "けさ","spell_en": "kesa","name": "今天早上" }
+            , { "id": 0, "word": "景色","spell_jp": "けしき","spell_en": "keshiki","name": "景色" }
+            , { "id": 0, "word": "消します","spell_jp": "けします","spell_en": "keshimasu","name": "擦掉" }
+            , { "id": 0, "word": "月","spell_jp": "げつ","spell_en": "getsu","name": "星期一" }
+            , { "id": 0, "word": "結婚します","spell_jp": "けっこんします","spell_en": "kekkon shimasu","name": "結婚" }
+            , { "id": 0, "word": "月曜日","spell_jp": "げつようび","spell_en": "getsuyoubi","name": "星期一" }
+            , { "id": 0, "word": "見学","spell_jp": "けんがく","spell_en": "kengaku","name": "參觀" }
+            , { "id": 0, "word": "元気","spell_jp": "げんき","spell_en": "genki","name": "精神" }
+            , { "id": 0, "word": "交番","spell_jp": "こうばん","spell_en": "kouban","name": "派出所" }
+            , { "id": 0, "word": "ご家族","spell_jp": "ごかぞく","spell_en": "gokazoku","name": "您的家人" }
+            , { "id": 0, "word": "ご兄弟","spell_jp": "ごきょうだい","spell_en": "gokyoudai","name": "您的兄弟姐妹" }
+            , { "id": 0, "word": "ここ","spell_jp": "ここ","spell_en": "koko","name": "這裡" }
+            , { "id": 0, "word": "午後","spell_jp": "ごご","spell_en": "gogo","name": "下午" }
+            , { "id": 0, "word": "ございます","spell_jp": "ございます","spell_en": "gozaimasu","name": "有" }
+            , { "id": 0, "word": "ご自由に","spell_jp": "ごじゆうに","spell_en": "gojiyuuni","name": "自由地" }
+            , { "id": 0, "word": "ご主人","spell_jp": "ごしゅじん","spell_en": "goshujin","name": "您的先生" }
+            , { "id": 0, "word": "午前","spell_jp": "ごぜん","spell_en": "gozen","name": "上午" }
+            , { "id": 0, "word": "こちら","spell_jp": "こちら","spell_en": "kochira","name": "這邊" }
+            , { "id": 0, "word": "こっち","spell_jp": "こっち","spell_en": "kocchi","name": "這邊" }
+            , { "id": 0, "word": "コップ","spell_jp": "こっぷ","spell_en": "koppu","name": "杯子" }
+            , { "id": 0, "word": "今年","spell_jp": "ことし","spell_en": "kotoshi","name": "今年" }
+            , { "id": 0, "word": "ことば","spell_jp": "ことば","spell_en": "kotoba","name": "語言" }
+            , { "id": 0, "word": "子ども","spell_jp": "こども","spell_en": "kodomo","name": "孩子" }
+            , { "id": 0, "word": "子どもさん","spell_jp": "こどさん","spell_en": "kodomosan","name": "您的孩子" }
+            , { "id": 0, "word": "この～","spell_jp": "この～","spell_en": "kono～","name": "這個" }
+            , { "id": 0, "word": "このあと","spell_jp": "このあと","spell_en": "konoato","name": "之後" }
+            , { "id": 0, "word": "この辺","spell_jp": "このへん","spell_en": "konohen","name": "這一帶" }
+            , { "id": 0, "word": "ご飯","spell_jp": "ごはん","spell_en": "gohan","name": "飯" }
+            , { "id": 0, "word": "コピー","spell_jp": "こぴー","spell_en": "kopi-","name": "影印" }
+            , { "id": 0, "word": "ご両親","spell_jp": "ごりょうしん","spell_en": "goryoushin","name": "您的父母" }
+            , { "id": 0, "word": "これ","spell_jp": "これ","spell_en": "kore","name": "這個" }
+            , { "id": 0, "word": "これから","spell_jp": "これから","spell_en": "korekara","name": "從此" }
+            , { "id": 0, "word": "～ごろ","spell_jp": "～ごろ","spell_en": "～goro","name": "左右" }
+            , { "id": 0, "word": "コンサート","spell_jp": "こんさート","spell_en": "konsa-to","name": "音樂會" }
+            , { "id": 0, "word": "今度","spell_jp": "こんど","spell_en": "kondo","name": "這次" }
+            , { "id": 0, "word": "今晩","spell_jp": "こんばん","spell_en": "konban","name": "今晚" }
+            , { "id": 0, "word": "コンビニ","spell_jp": "こんべに","spell_en": "konbini","name": "便利商店" }
+            , { "id": 0, "word": "コンピューター","spell_jp": "こんぴゅーたー","spell_en": "konpyu-ta-","name": "電腦" }
+            , { "id": 0, "word": "先に","spell_jp": "さきに","spell_en": "saki ni","name": "先" }
+            , { "id": 0, "word": "咲きます","spell_jp": "さきます","spell_en": "sakimasu","name": "開花" }
+            , { "id": 0, "word": "作文","spell_jp": "さくぶん","spell_en": "sakubun","name": "作文" }
+            , { "id": 0, "word": "さくら","spell_jp": "さくら","spell_en": "sakura","name": "櫻花" }
+            , { "id": 0, "word": "さしみ","spell_jp": "さしみ","spell_en": "sashimi","name": "生魚片" }
+            , { "id": 0, "word": "サッカー","spell_jp": "さっかー","spell_en": "sakka-","name": "足球" }
+            , { "id": 0, "word": "さっき","spell_jp": "さっき","spell_en": "sakki","name": "剛才" }
+            , { "id": 0, "word": "雑誌","spell_jp": "ざっし","spell_en": "zasshi","name": "雜誌" }
+            , { "id": 0, "word": "～さん","spell_jp": "～さん","spell_en": "～san","name": "先生/小姐" }
+            , { "id": 0, "word": "サンドイッチ","spell_jp": "さんどいっち","spell_en": "sandoitchi","name": "三明治" }
+            , { "id": 0, "word": "残念","spell_jp": "ざんねん","spell_en": "zannen","name": "可惜" }
+            , { "id": 0, "word": "散歩","spell_jp": "さんぽ","spell_en": "sanpo","name": "散步" }
+            , { "id": 0, "word": "字","spell_jp": "じ","spell_en": "ji","name": "字" }
+            , { "id": 0, "word": "試合","spell_jp": "しあい","spell_en": "shiai","name": "比賽" }
+            , { "id": 0, "word": "しかし","spell_jp": "しかし","spell_en": "shikashi","name": "但是" }
+            , { "id": 0, "word": "時間","spell_jp": "じかん","spell_en": "jikan","name": "時間" }
+            , { "id": 0, "word": "試験","spell_jp": "しけん","spell_en": "shiken","name": "考試" }
+            , { "id": 0, "word": "仕事","spell_jp": "しごと","spell_en": "shigoto","name": "工作" }
+            , { "id": 0, "word": "知っています", "spell_jp": "しっています", "spell_en": "shiteimasu", "name": "知道"}
+            , { "id": 0, "word": "質問", "spell_jp": "しつもん", "spell_en": "shitsumon", "name": "問題，提問"}
+            , { "id": 0, "word": "自転車", "spell_jp": "じてんしゃ", "spell_en": "jitensha", "name": "自行車"}
+            , { "id": 0, "word": "死にます", "spell_jp": "しにます", "spell_en": "shinimasu", "name": "死，死亡"}
+            , { "id": 0, "word": "します", "spell_jp": "します", "spell_en": "shimasu", "name": "做"}
+            , { "id": 0, "word": "事務室", "spell_jp": "じむしつ", "spell_en": "jimushitsu", "name": "事務所，辦公室"}
+            , { "id": 0, "word": "じゃ", "spell_jp": "じゃ", "spell_en": "ja", "name": "那麼"}
+            , { "id": 0, "word": "じゃあ", "spell_jp": "じゃあ", "spell_en": "jaa", "name": "那麼"}
+            , { "id": 0, "word": "写真", "spell_jp": "しゃしん", "spell_en": "shashin", "name": "照片"}
+            , { "id": 0, "word": "シャワー", "spell_jp": "シャワー", "spell_en": "shawaa", "name": "淋浴，沖涼"}
+            , { "id": 0, "word": "住所", "spell_jp": "じゅうしょ", "spell_en": "juusho", "name": "地址"}
+            , { "id": 0, "word": "授業", "spell_jp": "じゅぎょう", "spell_en": "jugyou", "name": "（學校的）課，課程"}
+            , { "id": 0, "word": "宿題", "spell_jp": "しゅくだい", "spell_en": "shukudai", "name": "作業"}
+            , { "id": 0, "word": "宿題（を）します", "spell_jp": "しゅくだいします", "spell_en": "shukudaishimasu", "name": "做作業"}
+            , { "id": 0, "word": "趣味", "spell_jp": "しゅみ", "spell_en": "shumi", "name": "興趣，愛好"}
+            , { "id": 0, "word": "種類", "spell_jp": "しゅるい", "spell_en": "shurui", "name": "種類"}
+            , { "id": 0, "word": "順番", "spell_jp": "じゅんばん", "spell_en": "junban", "name": "順序"}
+            , { "id": 0, "word": "上手", "spell_jp": "じょうず", "spell_en": "jouzu", "name": "擅長，拿手；好，高明"}
+            , { "id": 0, "word": "丈夫", "spell_jp": "じょうぶ", "spell_en": "joubu", "name": "健康，健壯；結實，牢固"}
+            , { "id": 0, "word": "食事", "spell_jp": "しょくじ", "spell_en": "shokuji", "name": "餐，用餐"}
+            , { "id": 0, "word": "食事（を）します", "spell_jp": "しょくじします", "spell_en": "shokujishimasu", "name": "吃飯，用餐"}
+            , { "id": 0, "word": "食堂", "spell_jp": "しょくどう", "spell_en": "shokudou", "name": "食堂"}
+            , { "id": 0, "word": "調べます", "spell_jp": "しらべます", "spell_en": "shirabemasu", "name": "調查，檢查；搜索，搜查"}
+            , { "id": 0, "word": "資料", "spell_jp": "しりょう", "spell_en": "shiryou", "name": "資料"}
+            , { "id": 0, "word": "白", "spell_jp": "しろ", "spell_en": "shiro", "name": "白，白色"}
+            , { "id": 0, "word": "白い", "spell_jp": "しろい", "spell_en": "shiroi", "name": "白的"}
+            , { "id": 0, "word": "新幹線", "spell_jp": "しんかんせん", "spell_en": "shinkansen", "name": "新幹線"}
+            , { "id": 0, "word": "親切", "spell_jp": "しんせつ", "spell_en": "shinsetsu", "name": "親切，友善"}
+            , { "id": 0, "word": "心配", "spell_jp": "しんぱい", "spell_en": "shinpai", "name": "擔心"}
+            , { "id": 0, "word": "心配します", "spell_jp": "しんぱいします", "spell_en": "shinpai shimasu", "name": "擔心"}
+            , { "id": 0, "word": "新聞", "spell_jp": "しんぶん", "spell_en": "shinbun", "name": "報紙"}
+            , { "id": 0, "word": "水", "spell_jp": "すい", "spell_en": "sui", "name": "星期三，週三"}
+            , { "id": 0, "word": "水泳", "spell_jp": "すいえい", "spell_en": "suiei", "name": "游泳"}
+            , { "id": 0, "word": "（タバコを）吸います", "spell_jp": "すいます", "spell_en": "suimasu", "name": "吸，抽（菸）"}
+            , { "id": 0, "word": "水曜日", "spell_jp": "すいようび", "spell_en": "suiyoubi", "name": "星期三"}
+            , { "id": 0, "word": "スーツ", "spell_jp": "スーツ", "spell_en": "suutsu", "name": "西裝，套裝"}
+            , { "id": 0, "word": "スーパー", "spell_jp": "スーパー", "spell_en": "suupaa", "name": "超市，超級市場"}
+            , { "id": 0, "word": "～過ぎ", "spell_jp": "～すぎ", "spell_en": "~ sugi", "name": "過～（例：過 7點）"}
+            , { "id": 0, "word": "スキー", "spell_jp": "スキー", "spell_en": "suki", "name": "滑雪"}
+            , { "id": 0, "word": "好きな物", "spell_jp": "すきなもの", "spell_en": "sukinamono", "name": "喜歡的東西"}
+            , { "id": 0, "word": "（おなかが）空きます", "spell_jp": "すきます", "spell_en": "sukimasu", "name": "（肚子）餓"}
+            , { "id": 0, "word": "すぐ", "spell_jp": "すぐ", "spell_en": "sugu", "name": "馬上"}
+            , { "id": 0, "word": "すぐに", "spell_jp": "すぐに", "spell_en": "sugu ni", "name": "馬上"}
+            , { "id": 0, "word": "スケート", "spell_jp": "スケート", "spell_en": "suke-to", "name": "滑冰"}
+            , { "id": 0, "word": "少し", "spell_jp": "すこし", "spell_en": "sukoshi", "name": "一點兒，稍微，稍許"}
+            , { "id": 0, "word": "～ずつ", "spell_jp": "～ずつ", "spell_en": "~ zutsu", "name": "每～（量）\n例：1日 3回ずつ（每天三次）\n少しずつ食べる（一點一點吃）"}
+            , { "id": 0, "word": "ストーブ", "spell_jp": "ストーブ", "spell_en": "suto-bu", "name": "暖爐，火爐"}
+            , { "id": 0, "word": "スプーン", "spell_jp": "スプーン", "spell_en": "supu-n", "name": "湯匙"}
+            , { "id": 0, "word": "スポーツ", "spell_jp": "スポーツ", "spell_en": "supo-tsu", "name": "運動"}
+            , { "id": 0, "word": "背", "spell_jp": "せ", "spell_en": "se", "name": "個子，身高"}
+            , { "id": 0, "word": "生活", "spell_jp": "せいかつ", "spell_en": "seikatsu", "name": "生活"}
+            , { "id": 0, "word": "ぜひ", "spell_jp": "ぜひ", "spell_en": "zehi", "name": "一定，務必"}
+            , { "id": 0, "word": "先週", "spell_jp": "せんしゅう", "spell_en": "senshuu", "name": "上週，上星期"}
+            , { "id": 0, "word": "全然～ない", "spell_jp": "ぜんぜん～ない", "spell_en": "zenzen~nai", "name": "完全沒有～，完全不～"}
+            , { "id": 0, "word": "洗濯（を）します", "spell_jp": "せんたくします", "spell_en": "sentakushimasu", "name": "洗滌，洗衣服"}
+            , { "id": 0, "word": "全部", "spell_jp": "ぜんぶ", "spell_en": "zenbu", "name": "全，全部"}
+            , { "id": 0, "word": "全部で", "spell_jp": "ぜんぶで", "spell_en": "zenbu de", "name": "一共，總共"}
+            , { "id": 0, "word": "ゾウ", "spell_jp": "ゾウ", "spell_en": "zou", "name": "大象"}
+            , { "id": 0, "word": "掃除", "spell_jp": "そうじ", "spell_en": "souji", "name": "掃除"}
+            , { "id": 0, "word": "掃除（を）します", "spell_jp": "そうじします", "spell_en": "soujishimasu", "name": "打掃"}
+            , { "id": 0, "word": "そこ", "spell_jp": "そこ", "spell_en": "soko", "name": "那兒，那裡"}
+            , { "id": 0, "word": "そして", "spell_jp": "そして", "spell_en": "soshite", "name": "而且，並且；然後"}
+            , { "id": 0, "word": "そちら", "spell_jp": "そちら", "spell_en": "sochira", "name": "你，您：\n指對方或聽話者"}
+            , { "id": 0, "word": "そちら", "spell_jp": "そちら", "spell_en": "sochira", "name": "你那邊，您那邊：\n指對方或聽話者所在的地方"}
+            , { "id": 0, "word": "そっち", "spell_jp": "そっち", "spell_en": "socchi", "name": "那邊"}
+            , { "id": 0, "word": "その", "spell_jp": "その", "spell_en": "sono", "name": "那，那個"}
+            , { "id": 0, "word": "そば", "spell_jp": "そば", "spell_en": "soba", "name": "旁邊，附近"}
+            , { "id": 0, "word": "空", "spell_jp": "そら", "spell_en": "sora", "name": "天，天空"}
+            , { "id": 0, "word": "それ", "spell_jp": "それ", "spell_en": "sore", "name": "那，那個（離聽話者近的東西）"}
+            , { "id": 0, "word": "それから", "spell_jp": "それから", "spell_en": "sorekara", "name": "然後，接著；而且，還有"}
+            , { "id": 0, "word": "それでは", "spell_jp": "それでは", "spell_en": "soredewa", "name": "那麼"}
+            , { "id": 0, "word": "大学", "spell_jp": "だいがく", "spell_en": "daigaku", "name": "大學" }
+            , { "id": 0, "word": "大学１年生", "spell_jp": "だいがくいちねんせい", "spell_en": "daigaku ichinensei", "name": "大學 1年級" }
+            , { "id": 0, "word": "大丈夫", "spell_jp": "だいじょうぶ", "spell_en": "daijoubu", "name": "沒問題" }
+            , { "id": 0, "word": "大好き", "spell_jp": "だいすき", "spell_en": "daisuki", "name": "非常喜歡，最喜歡" }
+            , { "id": 0, "word": "大切", "spell_jp": "たいせつ", "spell_en": "taisetsu", "name": "重要，寶貴；珍惜" }
+            , { "id": 0, "word": "たいてい", "spell_jp": "たいてい", "spell_en": "taitei", "name": "基本上，大約，一般" }
+            , { "id": 0, "word": "たいへん", "spell_jp": "たいへん", "spell_en": "taihen", "name": "很，非常" }
+            , { "id": 0, "word": "大変", "spell_jp": "たいへん", "spell_en": "taihen", "name": "嚴重，不得了；辛苦，費勁" }
+            , { "id": 0, "word": "たくさん", "spell_jp": "たくさん", "spell_en": "takusan", "name": "很多" }
+            , { "id": 0, "word": "タクシー", "spell_jp": "タクシー", "spell_en": "takushi-", "name": "計程車" }
+            , { "id": 0, "word": "～だけ", "spell_jp": "～だけ", "spell_en": "~dake", "name": "只有～，僅僅～" }
+            , { "id": 0, "word": "出します", "spell_jp": "だします", "spell_en": "dashimasu", "name": "寄（信）" }
+            , { "id": 0, "word": "（レポートを）出します", "spell_jp": "だします", "spell_en": "dashimasu", "name": "提交（報告）" }
+            , { "id": 0, "word": "正しい", "spell_jp": "ただしい", "spell_en": "tadashii", "name": "對，對的，正確" }
+            , { "id": 0, "word": "～たち", "spell_jp": "～たち", "spell_en": "~tachi", "name": "～們" }
+            , { "id": 0, "word": "立ちます", "spell_jp": "たちます", "spell_en": "tachimasu", "name": "站，立" }
+            , { "id": 0, "word": "棚", "spell_jp": "たな", "spell_en": "tana", "name": "架子；棚，櫃" }
+            , { "id": 0, "word": "楽しみ", "spell_jp": "たのしみ", "spell_en": "tanoshimi", "name": "興趣，樂趣；期望，期待" }
+            , { "id": 0, "word": "たぶん", "spell_jp": "たぶん", "spell_en": "tabun", "name": "也許，有可能，大概" }
+            , { "id": 0, "word": "だめ", "spell_jp": "だめ", "spell_en": "dame", "name": "不好，壞的，不可以，不准" }
+            , { "id": 0, "word": "だめ", "spell_jp": "だめ", "spell_en": "dame", "name": "" }
+            , { "id": 0, "word": "だれ", "spell_jp": "だれ", "spell_en": "dare", "name": "誰" }
+            , { "id": 0, "word": "だれか", "spell_jp": "だれか", "spell_en": "dareka", "name": "某人，有人" }
+            , { "id": 0, "word": "だれとも", "spell_jp": "だれとも", "spell_en": "daretomo", "name": "和任何人都～，和誰都～" }
+            , { "id": 0, "word": "だれにも", "spell_jp": "だれにも", "spell_en": "darenimo", "name": "對任何人都～，對誰都～" }
+            , { "id": 0, "word": "だれも", "spell_jp": "だれも", "spell_en": "daremo", "name": "任何人都～，任誰都～" }
+            , { "id": 0, "word": "誕生日", "spell_jp": "たんじょうび", "spell_en": "tanjoubi", "name": "生日" }
+            , { "id": 0, "word": "ダンス", "spell_jp": "ダンス", "spell_en": "dansu", "name": "舞蹈" }
+            , { "id": 0, "word": "チェックインします", "spell_jp": "チェックインします", "spell_en": "chekkuinshimasu", "name": "（飯店入住）登記；辦理（登機）手\n續" }
+            , { "id": 0, "word": "近く", "spell_jp": "ちかく", "spell_en": "chikaku", "name": "附近" }
+            , { "id": 0, "word": "チケット", "spell_jp": "チケット", "spell_en": "chiketto", "name": "票" }
+            , { "id": 0, "word": "注文します", "spell_jp": "ちゅうもんします", "spell_en": "chuumon shimasu", "name": "點菜；下訂單" }
+            , { "id": 0, "word": "ちょうど", "spell_jp": "ちょうど", "spell_en": "choudo", "name": "正好，剛好" }
+            , { "id": 0, "word": "ちょっと", "spell_jp": "ちょっと", "spell_en": "chotto", "name": "一點點，稍微" }
+            , { "id": 0, "word": "机", "spell_jp": "つくえ", "spell_en": "tsukue", "name": "桌子，書桌" }
+            , { "id": 0, "word": "つけます", "spell_jp": "つけます", "spell_en": "tsukemasu", "name": "開（電器）" }
+            , { "id": 0, "word": "妻", "spell_jp": "つま", "spell_en": "tsuma", "name": "內人，我太太" }
+            , { "id": 0, "word": "手", "spell_jp": "て", "spell_en": "te", "name": "手" }
+            , { "id": 0, "word": "テーブル", "spell_jp": "てーぷる", "spell_en": "te-buru", "name": "桌子" }
+            , { "id": 0, "word": "出かけます", "spell_jp": "でかけます", "spell_en": "dekakemasu", "name": "外出，出門，出去" }
+            , { "id": 0, "word": "できます", "spell_jp": "できます", "spell_en": "dekimasu", "name": "能，可以，可能" }
+            , { "id": 0, "word": "テスト", "spell_jp": "てすと", "spell_en": "tesuto", "name": "考試，測試" }
+            , { "id": 0, "word": "手伝います", "spell_jp": "てつだいます", "spell_en": "tetsudaimasu", "name": "幫助，幫忙" }
+            , { "id": 0, "word": "テニス", "spell_jp": "てにす", "spell_en": "tenisu", "name": "網球" }
+            , { "id": 0, "word": "では", "spell_jp": "では", "spell_en": "dewa", "name": "那麼" }
+            , { "id": 0, "word": "（家を）出ます", "spell_jp": "でます", "spell_en": "demasu", "name": "離開（家），出門" }
+            , { "id": 0, "word": "（会議に／パーティーに）出ます", "spell_jp": "でます", "spell_en": "demasu", "name": "參加，出席（會議∕派對）" }
+            , { "id": 0, "word": "（大学を）出ます", "spell_jp": "でます", "spell_en": "demasu", "name": "（大學）畢業" }
+            , { "id": 0, "word": "でも", "spell_jp": "でも", "spell_en": "demo", "name": "不過，但是，可是" }
+            , { "id": 0, "word": "テレビ", "spell_jp": "テレビ", "spell_en": "terebi", "name": "電視" }
+            , { "id": 0, "word": "天気", "spell_jp": "てんき", "spell_en": "tenki", "name": "天氣" }
+            , { "id": 0, "word": "天気の日", "spell_jp": "てんきのひ", "spell_en": "tenki no hi", "name": "好天氣的時候" }
+            , { "id": 0, "word": "電子辞書", "spell_jp": "でんしじしょ", "spell_en": "denshijisho", "name": "電子辭典" }
+            , { "id": 0, "word": "展覧会", "spell_jp": "てんらんかい", "spell_en": "tenrankai", "name": "展覽會" }
+            , { "id": 0, "word": "電話（を）します", "spell_jp": "でんわします", "spell_en": "denwashimasu", "name": "打電話，通電話" }
+            , { "id": 0, "word": "土", "spell_jp": "ど", "spell_en": "do", "name": "星期六，週六" }
+            , { "id": 0, "word": "ドア", "spell_jp": "ドア", "spell_en": "doa", "name": "門" }
+            , { "id": 0, "word": "どう", "spell_jp": "どう", "spell_en": "dou", "name": "如何，怎麼樣" }
+            , { "id": 0, "word": "どうして", "spell_jp": "どうして", "spell_en": "doushite", "name": "為什麼" }
+            , { "id": 0, "word": "動物", "spell_jp": "どうぶつ", "spell_en": "doubutsu", "name": "動物" }
+            , { "id": 0, "word": "動物園", "spell_jp": "どうぶつえん", "spell_en": "doubutsuen", "name": "動物園" }
+            , { "id": 0, "word": "どうやって", "spell_jp": "どうやって", "spell_en": "douyatte", "name": "如何（做），怎麼（做）" }
+            , { "id": 0, "word": "ときどき", "spell_jp": "ときどき", "spell_en": "tokidoki", "name": "有時，有時候" }
+            , { "id": 0, "word": "時計", "spell_jp": "とけい", "spell_en": "tokei", "name": "鐘，錶" }
+            , { "id": 0, "word": "どこ", "spell_jp": "どこ", "spell_en": "doko", "name": "哪兒，哪裡" }
+            , { "id": 0, "word": "どこ（へ）も", "spell_jp": "どこも", "spell_en": "dokomo", "name": "任何地方都～，哪裡都～" }
+            , { "id": 0, "word": "どこか", "spell_jp": "どこか", "spell_en": "dokoka", "name": "某處，有的地方" }
+            , { "id": 0, "word": "ところ", "spell_jp": "ところ", "spell_en": "tokoro", "name": "地方，地點" }
+            , { "id": 0, "word": "図書室", "spell_jp": "としょしつ", "spell_en": "toshoshistu", "name": "圖書室" }
+            , { "id": 0, "word": "どちら", "spell_jp": "どちら", "spell_en": "dochira", "name": "哪個；哪邊；哪位" }
+            , { "id": 0, "word": "どっち", "spell_jp": "どっち", "spell_en": "docchi", "name": "哪個；哪邊" }
+            , { "id": 0, "word": "とても", "spell_jp": "とても", "spell_en": "totemo", "name": "非常，很" }
+            , { "id": 0, "word": "届きます", "spell_jp": "とどきます", "spell_en": "todokimasu", "name": "到達，收到，到" }
+            , { "id": 0, "word": "どなた", "spell_jp": "どなた", "spell_en": "donata", "name": "哪位" }
+            , { "id": 0, "word": "どの～", "spell_jp": "どの～", "spell_en": "dono~", "name": "哪個～" }
+            , { "id": 0, "word": "どのくらい", "spell_jp": "どのくらい", "spell_en": "donokurai", "name": "多少" }
+            , { "id": 0, "word": "土曜日", "spell_jp": "どようび", "spell_en": "doyoubi", "name": "星期六" }
+            , { "id": 0, "word": "鳥", "spell_jp": "とり", "spell_en": "tori", "name": "鳥" }
+            , { "id": 0, "word": "撮ります", "spell_jp": "とります", "spell_en": "torimasu", "name": "拍（照）" }
+            , { "id": 0, "word": "取ります", "spell_jp": "とります", "spell_en": "torimasu", "name": "拿，取（東西）" }
+            , { "id": 0, "word": "どれ", "spell_jp": "どれ", "spell_en": "dore", "name": "哪個" }
+            , { "id": 0, "word": "どれか", "spell_jp": "どれか", "spell_en": "doreka", "name": "某個，有一個" }
+            , { "id": 0, "word": "どれくらい", "spell_jp": "どれくらい", "spell_en": "dorekurai", "name": "多少" }
+            , { "id": 0, "word": "どれでも", "spell_jp": "どれでも", "spell_en": "doredemo", "name": "任何一個都～，哪個都～" }
+            , { "id": 0, "word": "どんな", "spell_jp": "どんな", "spell_en": "donna", "name": "什麼樣的，怎樣的" }
+            , { "id": 0, "word": "ない", "spell_jp": "ない", "spell_en": "nai", "name": "無，沒有" }
+            , { "id": 0, "word": "ナイフ", "spell_jp": "ナイフ", "spell_en": "naifu", "name": "小刀" }
+            , { "id": 0, "word": "（病気が）治ります", "spell_jp": "なおります", "spell_en": "naorimasu", "name": "（病）好，痊癒" }
+            , { "id": 0, "word": "中", "spell_jp": "なか", "spell_en": "naka", "name": "之中，其中" }
+            , { "id": 0, "word": "（物が）無くなります", "spell_jp": "なくなります", "spell_en": "nakunarimasu", "name": "（東西）遺失，消失，沒有了" }
+            , { "id": 0, "word": "なぜ", "spell_jp": "なぜ", "spell_en": "naze", "name": "為什麼" }
+            , { "id": 0, "word": "夏休み", "spell_jp": "なつやすみ", "spell_en": "natsuyasumi", "name": "暑假" }
+            , { "id": 0, "word": "～など", "spell_jp": "～など", "spell_en": "~nado", "name": "～等" }
+            , { "id": 0, "word": "何", "spell_jp": "なに", "spell_en": "nani", "name": "什麼" }
+            , { "id": 0, "word": "何か", "spell_jp": "なにか", "spell_en": "nanika", "name": "某些東西，有什麼" }
+            , { "id": 0, "word": "何も", "spell_jp": "なにも", "spell_en": "nanimo", "name": "任何東西都～，什麼也～" }
+            , { "id": 0, "word": "名前", "spell_jp": "なまえ", "spell_en": "namae", "name": "名字，姓名" }
+            , { "id": 0, "word": "習います", "spell_jp": "ならいます", "spell_en": "naraimasu", "name": "學" }
+            , { "id": 0, "word": "何時", "spell_jp": "なんじ", "spell_en": "nanji", "name": "幾點" }
+            , { "id": 0, "word": "何で", "spell_jp": "なんで", "spell_en": "nande", "name": "如何（做），怎麼（做）" }
+            , { "id": 0, "word": "何でも", "spell_jp": "なんでも", "spell_en": "nandemo", "name": "不管什麼都～，無論如何都～" }
+            , { "id": 0, "word": "日", "spell_jp": "にち", "spell_en": "nichi", "name": "星期天，週日" }
+            , { "id": 0, "word": "日曜日", "spell_jp": "にちようび", "spell_en": "nichiyoubi", "name": "星期天" }
+            , { "id": 0, "word": "日本", "spell_jp": "にほん", "spell_en": "nihon", "name": "日本" }
+            , { "id": 0, "word": "日本語", "spell_jp": "にほんご", "spell_en": "nihongo", "name": "日語" }
+            , { "id": 0, "word": "日本人", "spell_jp": "にほんじん", "spell_en": "nihonjin", "name": "日本人" }
+            , { "id": 0, "word": "荷物", "spell_jp": "にもつ", "spell_en": "nimotsu", "name": "行李；貨物；隨身物品" }
+            , { "id": 0, "word": "庭", "spell_jp": "にわ", "spell_en": "niwa", "name": "院子，庭院" }
+            , { "id": 0, "word": "脱ぎます", "spell_jp": "ぬぎます", "spell_en": "nugimasu", "name": "脫，脫掉，摘掉" }
+            , { "id": 0, "word": "猫", "spell_jp": "ねこ", "spell_en": "neko", "name": "貓" }
+            , { "id": 0, "word": "（山に）登ります", "spell_jp": "のぼります", "spell_en": "noborimasu", "name": "爬，登（山）" }
+            , { "id": 0, "word": "歯", "spell_jp": "は", "spell_en": "ha", "name": "牙，牙齒" }
+            , { "id": 0, "word": "パーティー", "spell_jp": "パーティー", "spell_en": "pa-ti-", "name": "派對，聚會" }
+            , { "id": 0, "word": "はい", "spell_jp": "はい", "spell_en": "hai", "name": "對，好，是" }
+            , { "id": 0, "word": "バイト", "spell_jp": "バイト", "spell_en": "baito", "name": "打工，兼職" }
+            , { "id": 0, "word": "（お風呂に）入ります", "spell_jp": "はいります", "spell_en": "hairimasu", "name": "入（浴）" }
+            , { "id": 0, "word": "（部屋に）入ります", "spell_jp": "はいります", "spell_en": "hairimasu", "name": "進（房間）" }
+            , { "id": 0, "word": "（靴／ズボンを）履きます", "spell_jp": "はきます", "spell_en": "hakimasu", "name": "穿（鞋子∕褲子）" }
+            , { "id": 0, "word": "箱", "spell_jp": "はこ", "spell_en": "hako", "name": "盒子，箱子" }
+            , { "id": 0, "word": "鋏", "spell_jp": "はさみ", "spell_en": "hasami", "name": "剪刀" }
+            , { "id": 0, "word": "初めて", "spell_jp": "はじめて", "spell_en": "hajimete", "name": "初次，首次，第一次" }
+            , { "id": 0, "word": "はじめに", "spell_jp": "はじめに", "spell_en": "hajimeni", "name": "首先，最初；開頭，序" }
+            , { "id": 0, "word": "バス", "spell_jp": "バス", "spell_en": "basu", "name": "巴士，公共汽車" }
+            , { "id": 0, "word": "パスタ", "spell_jp": "パスタ", "spell_en": "pasuta", "name": "義大利麵" }
+            , { "id": 0, "word": "働きます", "spell_jp": "はたらきます", "spell_en": "hatarakimasu", "name": "工作" }
+            , { "id": 0, "word": "花", "spell_jp": "はな", "spell_en": "hana", "name": "花" }
+            , { "id": 0, "word": "鼻", "spell_jp": "はな", "spell_en": "hana", "name": "鼻子" }
+            , { "id": 0, "word": "話", "spell_jp": "はなし", "spell_en": "hanashi", "name": "話，談話，講話；故事" }
+            , { "id": 0, "word": "花屋", "spell_jp": "はなや", "spell_en": "hanaya", "name": "花店" }
+            , { "id": 0, "word": "（お金を）払います", "spell_jp": "はらいます", "spell_en": "haraimasu", "name": "付（錢）" }
+            , { "id": 0, "word": "（写真を）貼ります", "spell_jp": "はります", "spell_en": "harimasu", "name": "貼（照片）" }
+            , { "id": 0, "word": "春", "spell_jp": "はる", "spell_en": "haru", "name": "春天" }
+            , { "id": 0, "word": "晩", "spell_jp": "ばん", "spell_en": "ban", "name": "晚上" }
+            , { "id": 0, "word": "半", "spell_jp": "はん", "spell_en": "han", "name": "半，半點（30分鐘）" }
+            , { "id": 0, "word": "ハンカチ", "spell_jp": "ハンカチ", "spell_en": "hankachi", "name": "手帕" }
+            , { "id": 0, "word": "晩ご飯", "spell_jp": "ばんごはん", "spell_en": "bangohan", "name": "晚飯，晚餐" }
+            , { "id": 0, "word": "パンダ", "spell_jp": "パンダ", "spell_en": "panda", "name": "熊貓" }
+            , { "id": 0, "word": "パン屋", "spell_jp": "パンや", "spell_en": "pan ya", "name": "麵包店" }
+            , { "id": 0, "word": "ピアノ", "spell_jp": "ピアノ", "spell_en": "piano", "name": "鋼琴" }
+            , { "id": 0, "word": "ビール", "spell_jp": "ビール", "spell_en": "bi-ru", "name": "啤酒" }
+            , { "id": 0, "word": "（ギター／ピアノを）弾きます", "spell_jp": "ひきます", "spell_en": "hikimasu", "name": "彈（吉他∕鋼琴）" }
+            , { "id": 0, "word": "飛行機", "spell_jp": "ひこうき", "spell_en": "hikouki", "name": "飛機" }
+            , { "id": 0, "word": "美術館", "spell_jp": "びじゅつかん", "spell_en": "bijutsukan", "name": "美術館" }
+            , { "id": 0, "word": "左側", "spell_jp": "ひだりがわ", "spell_en": "hidarigawa", "name": "左側" }
+            , { "id": 0, "word": "人", "spell_jp": "ひと", "spell_en": "hito", "name": "人" }
+            , { "id": 0, "word": "暇", "spell_jp": "ひま", "spell_en": "hima", "name": "空，空閒；有空" }
+            , { "id": 0, "word": "病気", "spell_jp": "びょうき", "spell_en": "byouki", "name": "病，疾病；生病" }
+            , { "id": 0, "word": "昼", "spell_jp": "ひる", "spell_en": "hiru", "name": "白天，白晝；中午" }
+            , { "id": 0, "word": "ビル", "spell_jp": "ビル", "spell_en": "biru", "name": "大樓，高樓" }
+            , { "id": 0, "word": "昼ご飯", "spell_jp": "ひるごはん", "spell_en": "hirugohan", "name": "午飯，午餐" }
+            , { "id": 0, "word": "昼休み", "spell_jp": "ひるやすみ", "spell_en": "hiruyasumi", "name": "午休" }
+            , { "id": 0, "word": "プール", "spell_jp": "プール", "spell_en": "pu-ru", "name": "游泳池" }
+            , { "id": 0, "word": "袋", "spell_jp": "ふくろ", "spell_en": "fukuro", "name": "袋子，口袋" }
+            , { "id": 0, "word": "富士山", "spell_jp": "ふじさん", "spell_en": "fujisan", "name": "富士山" }
+            , { "id": 0, "word": "船", "spell_jp": "ふね", "spell_en": "fune", "name": "船" }
+            , { "id": 0, "word": "踏みます", "spell_jp": "ふみます", "spell_en": "fumimasu", "name": "踩，踏" }
+            , { "id": 0, "word": "冬", "spell_jp": "ふゆ", "spell_en": "fuyu", "name": "冬天" }
+            , { "id": 0, "word": "冬休み", "spell_jp": "ふゆやすみ", "spell_en": "fuyuyasumi", "name": "寒假" }
+            , { "id": 0, "word": "プレゼント", "spell_jp": "プレゼント", "spell_en": "purezento", "name": "禮物，禮品" }
+            , { "id": 0, "word": "下手", "spell_jp": "へた", "spell_en": "heta", "name": "不擅長，拙劣" }
+            , { "id": 0, "word": "変", "spell_jp": "へん", "spell_en": "hen", "name": "奇怪，古怪，異常" }
+            , { "id": 0, "word": "勉強", "spell_jp": "べんきょう", "spell_en": "benkyou", "name": "學習" }
+            , { "id": 0, "word": "勉強（を）します", "spell_jp": "べんきょうします", "spell_en": "benkyoushimasu", "name": "學習，讀書" }
+            , { "id": 0, "word": "帽子", "spell_jp": "ぼうし", "spell_en": "boushi", "name": "帽子" }
+            , { "id": 0, "word": "ほか", "spell_jp": "ほか", "spell_en": "hoka", "name": "其他" }
+            , { "id": 0, "word": "ほかの人", "spell_jp": "ほかの人", "spell_en": "hoka no hito", "name": "其他人" }
+            , { "id": 0, "word": "ぼく", "spell_jp": "ぼく", "spell_en": "boku", "name": "我" }
+            , { "id": 0, "word": "本当", "spell_jp": "ほんとう", "spell_en": "hontou", "name": "真的，真正的" }
+            , { "id": 0, "word": "本当に", "spell_jp": "ほんとうに", "spell_en": "hontouni", "name": "真的，實在，確實" }
+            , { "id": 0, "word": "毎朝", "spell_jp": "まいあさ", "spell_en": "maiasa", "name": "每天早上" }
+            , { "id": 0, "word": "毎週", "spell_jp": "まいしゅう", "spell_en": "maishuu", "name": "每星期，每週" }
+            , { "id": 0, "word": "毎日", "spell_jp": "まいにち", "spell_en": "mainichi", "name": "每天" }
+            , { "id": 0, "word": "毎晩", "spell_jp": "まいばん", "spell_en": "maiban", "name": "每天晚上" }
+            , { "id": 0, "word": "～前", "spell_jp": "～まえ", "spell_en": "~mae", "name": "～之前，～以前" }
+            , { "id": 0, "word": "また", "spell_jp": "また", "spell_en": "mata", "name": "又，再，還" }
+            , { "id": 0, "word": "町", "spell_jp": "まち", "spell_en": "machi", "name": "鎮，城市" }
+            , { "id": 0, "word": "間違えます", "spell_jp": "まちがえます", "spell_en": "machigaemasu", "name": "搞錯，弄錯" }
+            , { "id": 0, "word": "まっすぐ", "spell_jp": "まっすぐ", "spell_en": "massugu", "name": "筆直，一直；坦率，直率（的人）" }
+            , { "id": 0, "word": "～まで", "spell_jp": "～まで", "spell_en": "~made", "name": "到～，～為止" }
+            , { "id": 0, "word": "漫画", "spell_jp": "まんが", "spell_en": "manga", "name": "漫畫" }
+            , { "id": 0, "word": "（歯を）磨きます", "spell_jp": "みがきます", "spell_en": "migakimasu", "name": "刷（牙）" }
+            , { "id": 0, "word": "右側", "spell_jp": "みぎがわ", "spell_en": "migigawa", "name": "右側" }
+            , { "id": 0, "word": "見せます", "spell_jp": "みせます", "spell_en": "misemasu", "name": "給（別人）看；出示，展現" }
+            , { "id": 0, "word": "みなさん", "spell_jp": "みなさん", "spell_en": "minasan", "name": "大家，各位" }
+            , { "id": 0, "word": "耳", "spell_jp": "みみ", "spell_en": "mimi", "name": "耳朵" }
+            , { "id": 0, "word": "みんな", "spell_jp": "みんな", "spell_en": "minna", "name": "大家；都，一切，全體" }
+            , { "id": 0, "word": "向こう", "spell_jp": "むこう", "spell_en": "mukou", "name": "正前方，對面；那邊，那兒" }
+            , { "id": 0, "word": "目", "spell_jp": "め", "spell_en": "me", "name": "眼睛" }
+            , { "id": 0, "word": "メール", "spell_jp": "メール", "spell_en": "me-ru", "name": "郵件，電子郵件" }
+            , { "id": 0, "word": "眼鏡", "spell_jp": "めがね", "spell_en": "megane", "name": "眼鏡" }
+            , { "id": 0, "word": "メロン", "spell_jp": "メロン", "spell_en": "meron", "name": "哈密瓜，甜瓜" }
+            , { "id": 0, "word": "もう一度", "spell_jp": "もういちど", "spell_en": "mouichido", "name": "再一次，再次" }
+            , { "id": 0, "word": "もう少し", "spell_jp": "もうすこし", "spell_en": "mousukoshi", "name": "再稍許，再一點" }
+            , { "id": 0, "word": "木", "spell_jp": "もく", "spell_en": "moku", "name": "星期四，週四" }
+            , { "id": 0, "word": "木曜日", "spell_jp": "もくようび", "spell_en": "mokuyoubi", "name": "星期四" }
+            , { "id": 0, "word": "もしもし", "spell_jp": "もしもし", "spell_en": "moshimoshi", "name": "喂" }
+            , { "id": 0, "word": "持ちます", "spell_jp": "もちます", "spell_en": "mochimasu", "name": "拿；擁有，持有" }
+            , { "id": 0, "word": "持っていきます", "spell_jp": "もっていきます", "spell_en": "motteikimasu", "name": "拿去" }
+            , { "id": 0, "word": "持ってきます", "spell_jp": "もってきます", "spell_en": "mottekimasu", "name": "拿來" }
+            , { "id": 0, "word": "もっと", "spell_jp": "もっと", "spell_en": "motto", "name": "更，更加，愈發" }
+            , { "id": 0, "word": "物", "spell_jp": "もの", "spell_en": "mono", "name": "東西" }
+            , { "id": 0, "word": "もらいます", "spell_jp": "もらいます", "spell_en": "moraimasu", "name": "得到，領受" }
+            , { "id": 0, "word": "八百屋", "spell_jp": "やおや", "spell_en": "yaoya", "name": "蔬果店" }
+            , { "id": 0, "word": "野球", "spell_jp": "やきゅう", "spell_en": "yakyuu", "name": "棒球" }
+            , { "id": 0, "word": "休みます", "spell_jp": "やすみます", "spell_en": "yasumimasu", "name": "休息；休假" }
+            , { "id": 0, "word": "山", "spell_jp": "やま", "spell_en": "yama", "name": "山" }
+            , { "id": 0, "word": "（映画を）やります", "spell_jp": "やります", "spell_en": "yarimasu", "name": "（電影）上映" }
+            , { "id": 0, "word": "（宿題／ゲームを）やります", "spell_jp": "やります", "spell_en": "yarimasu", "name": "做（作業∕遊戲）" }
+            , { "id": 0, "word": "夕方", "spell_jp": "ゆうがた", "spell_en": "yuugata", "name": "傍晚，黃昏" }
+            , { "id": 0, "word": "雪", "spell_jp": "ゆき", "spell_en": "yuki", "name": "雪" }
+            , { "id": 0, "word": "ゆっくり", "spell_jp": "ゆっくり", "spell_en": "yukkuri", "name": "慢慢地，悠閒自得地" }
+            , { "id": 0, "word": "よく", "spell_jp": "よく", "spell_en": "yoku", "name": "經常，好好地" }
+            , { "id": 0, "word": "予定", "spell_jp": "よてい", "spell_en": "yotei", "name": "計畫；約定" }
+            , { "id": 0, "word": "呼びます", "spell_jp": "よびます", "spell_en": "yobimasu", "name": "叫，叫喚；邀請" }
+            , { "id": 0, "word": "予約します", "spell_jp": "よやくします", "spell_en": "yoyaku shimasu", "name": "預約，預訂" }
+            , { "id": 0, "word": "夜", "spell_jp": "よる", "spell_en": "yoru", "name": "晚上，夜裡" }
+            , { "id": 0, "word": "ラーメン", "spell_jp": "ラーメン", "spell_en": "ra-men", "name": "拉麵" }
+            , { "id": 0, "word": "来月", "spell_jp": "らいげつ", "spell_en": "raigetsu", "name": "下個月" }
+            , { "id": 0, "word": "来週", "spell_jp": "らいしゅう", "spell_en": "raishuu", "name": "下星期，下週" }
+            , { "id": 0, "word": "来年", "spell_jp": "らいねん", "spell_en": "rainen", "name": "明年" }
+            , { "id": 0, "word": "寮", "spell_jp": "りょう", "spell_en": "ryou", "name": "宿舍" }
+            , { "id": 0, "word": "料理（を）します", "spell_jp": "りょうりします", "spell_en": "ryourishimasu", "name": "做料理，做菜" }
+            , { "id": 0, "word": "旅行", "spell_jp": "りょこう", "spell_en": "ryokou", "name": "旅行" }
+            , { "id": 0, "word": "旅行（を）します", "spell_jp": "りょこうします", "spell_en": "ryokoushimasu", "name": "旅行，去旅行" }
+            , { "id": 0, "word": "リンゴ", "spell_jp": "リンゴ", "spell_en": "ringo", "name": "蘋果" }
+            , { "id": 0, "word": "レジ", "spell_jp": "レジ", "spell_en": "reji", "name": "收銀處；收銀機" }
+            , { "id": 0, "word": "レポート", "spell_jp": "レポート", "spell_en": "repo-to", "name": "報告" }
+            , { "id": 0, "word": "練習（を）します", "spell_jp": "れんしゅうします", "spell_en": "renshuushimasu", "name": "練習" }
+            , { "id": 0, "word": "ロビー", "spell_jp": "ロビー", "spell_en": "robi-", "name": "大廳，門廳" }
+            , { "id": 0, "word": "ワイン", "spell_jp": "ワイン", "spell_en": "wain", "name": "葡萄酒" }
+            , { "id": 0, "word": "分かります", "spell_jp": "わかります", "spell_en": "wakarimasu", "name": "知道，明白，理解，懂得" }
+            , { "id": 0, "word": "わさび", "spell_jp": "わさび", "spell_en": "wasabi", "name": "芥末" }
+            , { "id": 0, "word": "忘れます", "spell_jp": "わすれます", "spell_en": "wasuremasu", "name": "忘，忘記" }
         ]
         , is_can_ans_check: true
         , test_words: []
@@ -399,7 +920,7 @@ var vm = new Vue({
     },
     methods: {
         init() {
-            //
+            this.words.map((value, key) => value['id'] = key);
             this.forget_words = this.words;
             this.postQuestion();
         }
