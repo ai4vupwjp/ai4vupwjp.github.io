@@ -29,6 +29,7 @@
                     <v-tab>未記憶名單</v-tab>
                     <v-tab>記憶名單</v-tab>
                     <v-tab>設定</v-tab>
+                    <v-tab>旅遊日文</v-tab>
                 </v-tabs>
 
                 <v-tabs-items v-model="tab" class="mb-6">
@@ -113,6 +114,14 @@
                         <v-col cols="2" class="text-center"><v-btn text @click="settingImport()">匯入</v-btn></v-col>
                     </v-row>
                 </v-tab-item>
+                <!-- 旅遊日文 -->
+                <v-tab-item>
+                    <v-btn v-if="show_word == ''" v-for="item in travel_words" v-bind:key="item.id" @click="set_show_wrod(item)"> {{ item.word }}</v-btn>
+                    <div v-if="show_word != ''" class="full-page-flex">
+                        <p class="centered-text" style="font-size:36px;"> {{ show_spell }} <br> {{ show_word }} </p>
+                    </div>
+                    <v-btn v-if="show_word != ''" @click="unset_show_wrod()"> back</v-btn>
+                </v-tab-item>
                 </v-tabs-items>
             </v-container>
         </v-main>
@@ -132,6 +141,29 @@ var vm = new Vue({
         , inputAns: []
         , questionWord: { id: 0, word: 'word', spell: 'spell', name: 'name' }
         , setting_json: ''
+        , show_word: ''
+        , show_spell: ''
+        , travel_words: [
+            { "id": 0, "word": "這裡可以外帶嗎？", "jp_word": "ここは 持ち帰り(テイクアウト) ありますか？", "spell_en": "[kokoha mochikaeri arimasuka]" }
+            , { "id": 1, "word": "外帶這個", "jp_word": "これ テイクアウト お願いします", "spell_en": "[kore teikuauto onegaishimasu]" }
+            , { "id": 2, "word": "內用", "jp_word": "店内で食べます", "spell_en": "[tennaide tabemasu]" }
+            , { "id": 3, "word": "兩個人 有空位嗎？", "jp_word": "すみません 二人です 今は席空いてますか？", "spell_en": "[sumimasen futaridesu imaha sekiaite masuka]" }
+            , { "id": 4, "word": "禁菸區", "jp_word": "禁煙席希望です", "spell_en": "[kinenseki kiboudesu]" }
+            , { "id": 5, "word": "XX時XX分 kai 預約", "jp_word": "XX じ XX 分に kai で予約している", "spell_en": "[XX ji XX fun ni kai de yoyakushiteiru]" }
+            , { "id": 6, "word": "請問要等多久？", "jp_word": "今は何分待ちですか？", "spell_en": "[imaha nanfun machidesuka]" }
+            , { "id": 7, "word": "請問可以加點外帶嗎？", "jp_word": "お持ち帰り用の注文したいですが...できますか？", "spell_en": "[omochikaeri youno cyumonshitaidesuga dekimasuka]" }
+            , { "id": 8, "word": "感謝招待", "jp_word": "ごちそうさまでした", "spell_en": "[gochisousamadeshita]" }
+            , { "id": 9, "word": "請再說一次", "jp_word": "もう一度、いいですか []", "spell_en": "[]" }
+            , { "id": 10, "word": "請講慢一點", "jp_word": "ゆっくり、いいですか []", "spell_en": "[]" }
+            , { "id": 11, "word": "結帳", "jp_word": "お会計お願いします", "spell_en": "[okaikei onegaishimasu]" }
+            , { "id": 12, "word": "請給我菜單", "jp_word": "メニューをください", "spell_en": "[menyu wo kudasai]" }
+            , { "id": 13, "word": "待會(吃完)再付款可以嗎？", "jp_word": "支払いは(食事が終わった)あとでも大丈夫ですか？", "spell_en": "[shiharai ha (syokujiga owatta)atodemo daijoubu desuka]" }
+            , { "id": 14, "word": "讓我再想一下吃什麼？", "jp_word": "もうちょと考える時間をいただいても大丈夫ですか？", "spell_en": "[mou cyoto kangaeru jikan wo itadaitemo daijoubu desuka]" }
+            , { "id": 15, "word": "還沒決定好 可以等等再點嗎？", "jp_word": "まだ(注文が)決まっていません　まだあとでお願いしてもいい？", "spell_en": "[mada(cyuumonga)kimatteimasan mada atodeonegaishitemoii]" }
+            , { "id": 16, "word": "我想點餐/加點", "jp_word": "注文/追加オーダー いいですが？", "spell_en": "[cyuumonga/tsuikao-da- iidesuga]" }
+            , { "id": 17, "word": "有用餐時間限制嗎？", "jp_word": "ここは食事の 時間制限ありますか？", "spell_en": "[kokoha syokujino jikan seiken arimasuka]" }
+            , { "id": 18, "word": "請問有吃喝到飽菜單嗎？", "jp_word": "食べ放題/飲み放題(コース/メニュー)はありますか？", "spell_en": "[tabehoudai / nomihoudai(ko-su/menyu-) ha arimasuka]" }
+        ]
         , words: [
             { "id": 0, "word": "私", "spell_jp": "わたし", "spell_en": "watashi", "name": "我" }
             , { "id": 1, "word": "彼/彼女", "spell_jp": "かれ/かのじょ", "spell_en": "kare/kanojo", "name": "他/她" }
@@ -1004,10 +1036,29 @@ var vm = new Vue({
             this.forget_words = setting_json.forget_words;
             this.remember_words = setting_json.remember_words;
         }
+        , set_show_wrod(item) {
+            this.show_word = item.jp_word;
+            this.show_spell = item.spell_en;
+        }
+        , unset_show_wrod() {
+            this.show_word = '';
+            this.show_spell = '';
+        }
     },
     watch: {
     },
 });
 
+
 </script>
+<style>
+.full-page-flex {
+  display: flex;
+  justify-content: center; /* 水平置中 */
+  align-items: center; /* 垂直置中 */
+  width: 100%; /* 容器滿版 */
+  height: 100vh; /* 容器高度滿版 (例如，滿版視窗高度) */
+}
+</style>
+
 </html>
